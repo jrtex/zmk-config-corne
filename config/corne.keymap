@@ -65,14 +65,14 @@
                 // layer 2: CHA
                 char_layer {
 // -----------------------------------------------------------------------------------------
-// |  TAB |     |     |     |     |     |   |     |  ~  |  \  |  |  |  `  | BKSP |
+// |  ESC |     |     |     |     |     |   |     |  ~  |  \  |  |  |  `  | BKSP |
 // | CTRL |     |     |     |     |     |   |     |  -  |  _  |  [  |  ]  |      |
-// | SHFT |     |     |     |     |     |   |     |  +  |  =  |  {  |  }  |      |
+// | CAPSWRD |  |     |     |     |     |   |     |  +  |  =  |  {  |  }  |      |
 //                    | GUI | LWR | SPC |   | ENT | RSE | ALT |
                         bindings = <
    &kp ESC   &trans &trans &trans &trans &trans   &trans &kp TILDE &kp BSLH  &kp PIPE  &kp GRAVE &trans
    &kp LCTRL &trans &trans &trans &trans &trans   &trans &kp MINUS &kp UNDER &kp LBKT  &kp RBKT  &trans
-   &kp LSHFT &trans &trans &trans &trans &trans   &trans &kp PLUS  &kp EQUAL &kp LBRC  &kp RBRC  &trans
+   &caps_word &trans &trans &trans &trans &trans   &trans &kp PLUS  &kp EQUAL &kp LBRC  &kp RBRC  &trans
                   &trans &mo MED  &trans   &trans &trans  &trans
                         >;
                 };
