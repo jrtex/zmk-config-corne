@@ -66,7 +66,7 @@
    &kp TAB   &kp Q &kp W &kp F &kp P &kp B   &kp J &kp L  &kp U     &kp Y   &kp SEMI  &kp BSPC
    &mo NAV   &kp A &kp R &kp S &kp T &kp G   &kp M &kp N  &kp E     &kp I   &kp O     &kp SQT
    &kp LSHFT &hm LGUI Z &hm LALT X &hm LCTRL C &hm LSHIFT D &kp V   &kp K &hm RSHFT H &hm RCTRL COMMA &hm RALT DOT &hm RGUI FSLH &kp RSHFT
-            &sk LSHFT  &mo NUM  &lt DNV SPACE   &kp RET  &mo CHR  &mo FUN
+            &sk LCTRL  &mo NUM  &lt DNV SPACE   &kp RET  &mo CHR  &mo FUN
                         >;
                 };
                 // layer 1: NUM
@@ -100,8 +100,8 @@
                 // layer 3: FUN
                 func_layer {
 // -----------------------------------------------------------------------------------------
-// |      |     |     |     |     |     |   |     |     |     |     |     |      |
-// |      |     |     |     |     |     |   |     |     |     |     |     |      |
+// |      | F1  | F2  | F3  | F4  | F5  |   | F6  | F7  | F8  | F9  | F10 |      |
+// |      | F11 | F12 |     |     |     |   |     |     |     |     |     |      |
 // |      |     |     |     |     |     |   |     |     |     |     |     |      |
 //                    |     |     |     |   |     |     |     |
                         bindings = <
@@ -114,8 +114,8 @@
                 // layer 4: MED
                 media_layer {
 // -----------------------------------------------------------------------------------------
-// |      |     |     |     |     |     |   |     |     |     |     |     |      |
-// |      |     |     |     |     |     |   |     |     |     |     |     |      |
+// |      |     |     |     |     |     |   |     |     |     |     | VDN |      |
+// |      |     |     |     |     |     |   |     | PRE | PLA | NXT | VUP |      |
 // |      |     |     |     |     |     |   |     |     |     |     |     |      |
 //                    |     |     |     |   |     |     |     |
                         bindings = <
@@ -142,13 +142,13 @@
                 // layer 6: DNV
                 desknav_layer {
 // -----------------------------------------------------------------------------------------
-// |      |     |     |     |     |     |   |     |     |     |     |     |      |
-// |      |     |     |     |     |     |   |     |     |     |     |     |      |
+// |      |     |     | TKV |     |     |   |     |     |     |     |     |      |
+// |      |     | DKL | TKV | DKR |     |   |     |     |     |     |     |      |
 // |      |     |     |     |     |     |   |     |     |     |     |     |      |
 //                    |     |     |     |   |     |     |     |
                         bindings = <
-   &trans  &trans  &trans  &kp LC(RG(UP))  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-   &trans  &trans  &kp LC(RG(LEFT)) &kp LC(RG(DOWN))  &kp LC(RG(RIGHT))  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+   &trans  &trans  &trans  &kp LG(TAB)  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+   &trans  &trans  &kp LC(RG(LEFT)) &kp LG(TAB)  &kp LC(RG(RIGHT))  &trans    &trans  &trans  &trans  &trans  &trans  &trans
    &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
                            &trans  &trans  &trans    &trans  &trans  &trans
                         >;
