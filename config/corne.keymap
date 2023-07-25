@@ -31,6 +31,15 @@
 */
 
 / {
+        combos {
+                compatible = "zmk,combos";
+                combo_caps {
+                        timeout-ms = <20>;
+                        key-positions = <24 35>;
+                        bindings = <&caps_word>;
+                };
+        };
+
         behaviors {
                 hm: homerow_mods {
                 compatible = "zmk,behavior-hold-tap";
