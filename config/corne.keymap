@@ -144,12 +144,12 @@
 // -----------------------------------------------------------------------------------------
 // |      |     |     | TKV |     |     |   |     |     |     |     |     |      |
 // |      |     | DKL | TKV | DKR |     |   |     |     |     |     |     |      |
-// |      |     |     |     |     |     |   |     |     |     |     |     |      |
+// |      |     | ATB | CTB  |     |     |   |     |     |     |     |     |      |
 //                    |     |     | --- |   |     |     |     |
                         bindings = <
    &trans  &trans  &trans  &kp LG(TAB)  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
    &trans  &trans  &kp LC(RG(LEFT)) &kp LG(TAB)  &kp LC(RG(RIGHT))  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-   &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+   &trans  &trans  &kp LA(TAB) &kp LC(TAB)  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
                            &trans  &trans  &trans    &trans  &trans  &trans
                         >;
                 };
