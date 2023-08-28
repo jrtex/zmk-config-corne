@@ -55,8 +55,8 @@
                                 , <&macro_wait_time 300>
                                 , <&macro_release &kp RALT>
                                 ;
-                }
-        }
+                };
+        };
 
         behaviors {
                 hm: homerow_mods {
