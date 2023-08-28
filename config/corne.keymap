@@ -168,7 +168,7 @@
                         bindings = <
    &trans  &trans  &trans  &kp LG(TAB)  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
    &trans  &trans  &kp LC(RG(LEFT)) &kp LG(TAB)  &kp LC(RG(RIGHT))  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-   &trans  &trans  &kp LS(TAB) &alt_tab &TAB  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+   &trans  &trans  &kp LS(TAB) &alt_tab &kp TAB  &trans    &trans  &trans  &trans  &trans  &trans  &trans
                            &trans  &trans  &trans    &trans  &trans  &trans
                         >;
                 };
