@@ -44,6 +44,20 @@
                 };
         };
 
+        macros {
+                alt_tab : alt_tab{
+                        label = "Alt-Tab";
+                        compatible = "zmk,behavior-macro";
+                        #binding-cells = <0>;
+                        bindings
+                                = <&macro_press &kb RALT>
+                                , <&macro_tap &kp TAB>
+                                , <&macro_wait_time 300>
+                                , <&macro_release &kp RALT>
+                                ;
+                }
+        }
+
         behaviors {
                 hm: homerow_mods {
                 compatible = "zmk,behavior-hold-tap";
@@ -55,6 +69,7 @@
                 bindings = <&kp>, <&kp>;
         };
     };
+        
 
         keymap {
                 compatible = "zmk,keymap";
@@ -148,12 +163,12 @@
 // -----------------------------------------------------------------------------------------
 // |      |     |     | TKV |     |     |   |     |     |     |     |     |      |
 // |      |     | DKL | TKV | DKR |     |   |     |     |     |     |     |      |
-// |      |     | ATB | CTB  |     |     |   |     |     |     |     |     |      |
+// |      |     | ATB | CTB |     |     |   |     |     |     |     |     |      |
 //                    |     |     | --- |   |     |     |     |
                         bindings = <
    &trans  &trans  &trans  &kp LG(TAB)  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
    &trans  &trans  &kp LC(RG(LEFT)) &kp LG(TAB)  &kp LC(RG(RIGHT))  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-   &trans  &trans  &kp LA(TAB) &kp LC(TAB)  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+   &trans  &trans  &kp LA(TAB) &alt_tab &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
                            &trans  &trans  &trans    &trans  &trans  &trans
                         >;
                 };
