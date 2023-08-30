@@ -8,48 +8,168 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 
+#define DEF 0
+#define NUM 1
+#define CHR 2
+#define FUN 3
+#define MED 4
+#define NAV 5
+#define DNV 6
+
+/*
+// ----------------------------------Combo Indexes------------------------------------------
+// |   0  |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  | 10  |  11  |
+// |  12  | 13  | 14  | 15  | 16  | 17  |   | 18  | 19  | 20  | 21  | 22  |  23  |
+// |  24  | 25  | 26  | 27  | 28  | 29  |   | 30  | 31  | 32  | 33  | 34  |  35  |
+//                    | 36  | 37  | 38  |   | 39  | 40  | 41  |
+                        bindings = <
+   &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+   &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+   &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                           &trans  &trans  &trans    &trans  &trans  &trans
+                        >;
+*/
+
+&lt {
+        tapping-term-ms = <250>;
+};
+
 / {
+        combos {
+                compatible = "zmk,combos";
+                combo_caps {
+                        timeout-ms = <20>;
+                        key-positions = <24 35>;
+                        bindings = <&caps_word>;
+                };
+        };
+
+        macros {
+                alt_tab: alt_tab {
+                        label = "Alt-Tab";
+                        compatible = "zmk,behavior-macro";
+                        #binding-cells = <0>;
+                        bindings
+                                = <&macro_press &kp RALT>
+                                , <&macro_tap &kp TAB>
+                                , <&macro_pause_for_release>
+                                , <&macro_release &kp RALT>
+                                ;
+                };
+        };
+
+        behaviors {
+                hm: homerow_mods {
+                compatible = "zmk,behavior-hold-tap";
+                label = "HOMEROW_MODS";
+                #binding-cells = <2>;
+                tapping-term-ms = <200>;
+                quick-tap-ms = <0>;
+                flavor = "tap-preferred";
+                bindings = <&kp>, <&kp>;
+                };
+        };
+        
+
         keymap {
                 compatible = "zmk,keymap";
 
+                // Layer 0: DEF
                 default_layer {
 // -----------------------------------------------------------------------------------------
-// |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BKSP |
-// | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
-// | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ESC  |
-//                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
+// |  TAB |  Q  |  W  |  F  |  P  |  B  |   |  J  |  L   |  U  |  Y  |  ;  | BKSP |
+// |  NAV |  A  |  R  |  S  |  T  |  G  |   |  M  |  N   |  E  |  I  |  O  |  '   |
+// | SHFT |  Z  |  X  |  C  |  D  |  V  |   |  K  |  H   |  ,  |  .  |  /  | ESC  |
+//               | OSM-CTRL | NUM | SPC |   | ENT | CHAR | FUN |
                         bindings = <
-   &kp TAB   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P    &kp BSPC
-   &kp LCTRL &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
-   &kp LSHFT &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp ESC
-                  &kp LGUI &mo 1 &kp SPACE   &kp RET &mo 2 &kp RALT
+   &kp TAB   &kp Q &kp W &kp F &kp P &kp B   &kp J &kp L  &kp U     &kp Y   &kp SEMI  &kp BSPC
+   &mo NAV   &kp A &kp R &kp S &kp T &kp G   &kp M &kp N  &kp E     &kp I   &kp O     &kp SQT
+   &kp LSHFT &hm LGUI Z &hm LALT X &hm LCTRL C &hm LSHIFT D &kp V   &kp K &hm RSHFT H &hm RCTRL COMMA &hm RALT DOT &hm RGUI FSLH &kp RSHFT
+            &sk LCTRL  &mo NUM  &lt DNV SPACE   &kp RET  &mo CHR  &mo FUN
                         >;
                 };
-                lower_layer {
+                // layer 1: NUM
+                numb_layer {
 // -----------------------------------------------------------------------------------------
-// |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
-// | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
+// |  ESC |  1  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
+// | CTRL |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  O  |      |
 // | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
-//                    | GUI |     | SPC |   | ENT |     | ALT |
+//                    |     | --- | SPC |   | ENT | MED |     |
                         bindings = <
-   &kp TAB    &kp N1       &kp N2       &kp N3       &kp N4       &kp N5         &kp N6   &kp N7   &kp N8 &kp N9    &kp N0 &kp BSPC
-   &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans &trans
-   &kp LSHFT  &trans       &trans       &trans       &trans       &trans         &trans   &trans   &trans &trans    &trans &trans
-                                    &kp LGUI     &trans       &kp SPACE      &kp RET  &trans   &kp RALT
+   &kp ESC   &kp EXCL &kp AT   &kp HASH &kp DLLR &kp PRCNT   &kp CARET &kp AMPS &kp KP_MULTIPLY &kp LPAR &kp RPAR &kp BSPC
+   &kp LCTRL &kp N1   &kp N2   &kp N3   &kp N4   &kp N5      &kp N6   &kp N7   &kp N8   &kp N9   &kp N0   &kp SQT
+   &kp LSHFT &trans   &trans   &trans   &trans  &trans      &trans   &trans   &trans   &trans   &trans   &trans
+                            &trans &trans  &trans          &trans  &mo MED  &trans
                         >;
                 };
-
-                raise_layer {
+                // layer 2: CHA
+                char_layer {
 // -----------------------------------------------------------------------------------------
-// |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
-// | CTRL |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
-// | SHFT |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
-//                    | GUI |     | SPC |   | ENT |     | ALT |
+// |  ESC |     |     |     |     |     |   |     |  ~  |  \  |  |  |  `  |      |
+// | CTRL |     |     |     |     |     |   |     |  -  |  _  |  [  |  ]  |      |
+// | CPSW |     |     |     |     |     |   |     |  +  |  =  |  {  |  }  |      |
+//                    |     | MED | SPC |   | ENT | --- |     |
                         bindings = <
-   &kp  TAB  &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT   &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR &kp RPAR &kp BSPC
-   &kp LCTRL &trans   &trans &trans   &trans   &trans      &kp MINUS &kp EQUAL &kp LBKT        &kp RBKT &kp BSLH &kp GRAVE
-   &kp LSHFT &trans   &trans &trans   &trans   &trans      &kp UNDER &kp PLUS  &kp LBRC        &kp RBRC &kp PIPE &kp TILDE
-                             &kp LGUI &trans   &kp SPACE   &kp RET   &trans    &kp RALT
+   &kp ESC   &trans &trans &trans &trans &trans   &trans &kp TILDE &kp BSLH  &kp PIPE  &kp GRAVE &trans
+   &kp LCTRL &trans &trans &trans &trans &trans   &trans &kp MINUS &kp UNDER &kp LBKT  &kp RBKT  &trans
+   &caps_word &trans &trans &trans &trans &trans   &trans &kp PLUS  &kp EQUAL &kp LBRC  &kp RBRC  &trans
+                  &trans &mo MED  &trans   &trans &trans  &trans
+                        >;
+                };
+                // layer 3: FUN
+                func_layer {
+// -----------------------------------------------------------------------------------------
+// |      | F1  | F2  | F3  | F4  | F5  |   | F6  | F7  | F8  | F9  | F10 |      |
+// | CTRL | F11 | F12 |     |     |     |   |     |     |     |     |     |      |
+// | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   |     |     |     |     |     |      |
+//                    |     |     |     |   |     |     | --- |
+                        bindings = <
+   &trans  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5    &kp F6  &kp F7  &kp F8  &kp F9  &kp F10 &trans
+   &kp LCTRL &kp F11 &kp F12 &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+   &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4     &trans  &trans  &trans  &trans  &trans  &trans
+                           &trans  &trans  &trans    &trans  &trans  &trans
+                        >;
+                };
+                // layer 4: MED
+                media_layer {
+// -----------------------------------------------------------------------------------------
+// |      |     |     |     |     |     |   |     |     |     |     | VDN |      |
+// |      |     |     |     |     |     |   |     | PRE | PLA | NXT | VUP |      |
+// |      |     |     |     |     |     |   |     |     |     |     |     |      |
+//                    |     | --- |     |   |     | --- |     |
+                        bindings = <
+   &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &kp C_VOL_UP  &trans
+   &trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp C_PREV &kp C_PP &kp C_NEXT  &kp C_VOL_DN  &trans
+   &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                           &trans  &trans  &trans    &trans  &trans  &trans
+                        >;
+                };
+                // layer 5: NAV
+                navigation_layer {
+// -----------------------------------------------------------------------------------------
+// |      |     | C-L | UP  | C-R |     |   |     | INS | HOM | PGU |     | C-BKSP|
+// | ---- |     | LFT | DWN | RGT |     |   |     | DEL | END | PGD |     |      |
+// |      |     |     |     | APP |     |   |     |     |     |     |     |      |
+//                    |     |     |     |   |     |     |     |
+                        bindings = <
+   &trans  &trans  &kp LC(LEFT) &kp UP  &kp LC(RIGHT) &trans    &trans  &kp INS  &kp HOME  &kp PG_UP  &trans  &kp LC(BSPC)
+   &trans  &trans  &kp LEFT &kp DOWN &kp RIGHT &trans   &trans  &kp DEL &kp END &kp PG_DN &trans &trans
+   &trans  &trans  &trans  &trans  &kp K_APP  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                           &trans  &trans  &trans    &trans  &trans  &trans
+                        >;
+                };
+                // layer 6: DNV
+                desknav_layer {
+// -----------------------------------------------------------------------------------------
+// |      |     |     | TKV |     |     |   |     |     |     |     |     |      |
+// |      |     | DKL | TKV | DKR |     |   |     |     |     |     |     |      |
+// |      | DEL |S-TAb|ATAB | TAB |     |   |     |     |     |     |     |      |
+//                    |     |     | --- |   |     |     |     |
+                        bindings = <
+   &trans  &trans  &trans  &kp LG(TAB)  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+   &trans  &trans  &kp LC(RG(LEFT)) &kp LG(TAB)  &kp LC(RG(RIGHT))  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+   &trans  &kp DEL  &kp LS(TAB) &alt_tab &kp TAB  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                           &trans  &trans  &trans    &trans  &trans  &trans
                         >;
                 };
         };
