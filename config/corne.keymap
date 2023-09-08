@@ -50,16 +50,28 @@
                         bindings = <&kp MINUS>;
                 };
                 combo_pipe {
-                        // N - U
+                        // E - U
                         timeout-ms = <20>;
                         key-positions = <8 20>;
-                        bindings = <&kp MINUS>;
+                        bindings = <&kp PIPE>;
                 };
                 combo_undscr {
                         // H - ,
                         timeout-ms = <20>;
                         key-positions = <31 32>;
-                        bindings = <&kp MINUS>;
+                        bindings = <&kp UNDER>;
+                };
+                combo_slash {
+                        // N - U
+                        timeout-ms = <20>;
+                        key-positions = <8 19>;
+                        bindings = <&kp FSLASH>;
+                };
+                combo_bslash {
+                        // L - E
+                        timeout-ms = <20>;
+                        key-positions = <7 20>;
+                        bindings = <&kp BSLH>;
                 };
         };
 
