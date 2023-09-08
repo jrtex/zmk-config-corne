@@ -65,7 +65,7 @@
                         // N - U
                         timeout-ms = <20>;
                         key-positions = <8 19>;
-                        bindings = <&kp FSLASH>;
+                        bindings = <&kp FSLH>;
                 };
                 combo_bslash {
                         // L - E
