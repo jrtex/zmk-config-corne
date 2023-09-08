@@ -38,9 +38,28 @@
         combos {
                 compatible = "zmk,combos";
                 combo_caps {
-                        timeout-ms = <20>;
+                        # LSHIFT - RSHIFT
+                        timeout-ms = <30>;
                         key-positions = <24 35>;
                         bindings = <&caps_word>;
+                };
+                combo_dash {
+                        # N - E
+                        timeout-ms = <20>;
+                        key-positions = <19 20>;
+                        bindings = <&kp MINUS>;
+                };
+                combo_pipe {
+                        # N - U
+                        timeout-ms = <20>;
+                        key-positions = <8 20>;
+                        bindings = <&kp MINUS>;
+                };
+                combo_undscr {
+                        # H - ,
+                        timeout-ms = <20>;
+                        key-positions = <31 32>;
+                        bindings = <&kp MINUS>;
                 };
         };
 
