@@ -64,7 +64,7 @@
                 combo_equal { // E - I: Equal
                         bindings = <&kp EQUAL>; key-positions = <20 21>; timeout-ms = <20>;
                 };
-                combo_equal { // I - O: Quote
+                combo_quote { // I - O: Quote
                         bindings = <&kp SQT>; key-positions = <21 22>; timeout-ms = <20>;
                 };
                 combo_lbrack { // E - H: Left Bracket
