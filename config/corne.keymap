@@ -64,10 +64,13 @@
                 combo_equal { // E - I: Equal
                         bindings = <&kp EQUAL>; key-positions = <20 21>; timeout-ms = <20>;
                 };
-                combo_lbrack { // E - I: Left Bracket
+                combo_equal { // I - O: Quote
+                        bindings = <&kp SQT>; key-positions = <21 22>; timeout-ms = <20>;
+                };
+                combo_lbrack { // E - H: Left Bracket
                         bindings = <&kp LBKT>; key-positions = <20 31>; timeout-ms = <20>;
                 };
-                combo_rbrack { // E - I: Right Bracket
+                combo_rbrack { // E - >: Right Bracket
                         bindings = <&kp RBKT>; key-positions = <20 33>; timeout-ms = <20>;
                 };
         };
