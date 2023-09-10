@@ -40,6 +40,9 @@
                 combo_caps { // LSHIFT - RSHIFT: Caps word
                         bindings = <&caps_word>; key-positions = <24 35>; timeout-ms = <30>;
                 };
+                combo_esc { // Q - W: Escape
+                        bindings = <&kp ESC>; key-positions = <1 2>; timeout-ms = <20>;
+                };
                 combo_dash { // N - E: Dash symbol
                         bindings = <&kp MINUS>; key-positions = <19 20>; timeout-ms = <20>;
                 };
@@ -54,6 +57,15 @@
                 };
                 combo_bslash { // L - E: Backslash
                         bindings = <&kp BSLH>; key-positions = <8 21>; timeout-ms = <20>;
+                };
+                combo_equal { // E - I: Equal
+                        bindings = <&kp EQUAL>; key-positions = <20 21>; timeout-ms = <20>;
+                };
+                combo_lbrack { // E - I: Left Bracket
+                        bindings = <&kp LBKT>; key-positions = <21 31>; timeout-ms = <20>;
+                };
+                combo_rbrack { // E - I: Right Bracket
+                        bindings = <&kp RBKT>; key-positions = <21 33>; timeout-ms = <20>;
                 };
         };
 
