@@ -53,7 +53,7 @@
                         bindings = <&kp FSLH>; key-positions = <8 19>; timeout-ms = <20>;
                 };
                 combo_bslash { // L - E: Backslash
-                        bindings = <&kp BSLH>; key-positions = <7 20>; timeout-ms = <20>;
+                        bindings = <&kp BSLH>; key-positions = <8 21>; timeout-ms = <20>;
                 };
         };
 
