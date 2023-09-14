@@ -52,6 +52,9 @@
                 combo_dash { // N - E: Dash symbol
                         bindings = <&kp MINUS>; key-positions = <19 20>; timeout-ms = <20>;
                 };
+                combo_dash { // U - Y: Tilde symbol
+                        bindings = <&kp TILDE>; key-positions = <7 8>; timeout-ms = <20>;
+                };
                 combo_pipe { // E - U: Pipe symbol
                         bindings = <&kp PIPE>; key-positions = <8 20>; timeout-ms = <20>;
                 };
