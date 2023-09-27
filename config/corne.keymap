@@ -38,16 +38,10 @@
                         bindings = <&caps_word>; key-positions = <28 31>; timeout-ms = <30>;
                 };
                 // Left hand
-                combo_esc { // Q - W: Escape
-                        bindings = <&kp ESC>; key-positions = <1 2>; timeout-ms = <20>;
-                };
-                combo_esc2 { // W - F: Escape
+                combo_esc { // W - F: Escape
                         bindings = <&kp ESC>; key-positions = <2 3>; timeout-ms = <20>;
                 };
-                combo_tab { // A - R: Tab
-                        bindings = <&kp TAB>; key-positions = <13 14>; timeout-ms = <20>;
-                };
-                combo_tab2 { // F - P: Tab
+                combo_tab { // F - P: Tab
                         bindings = <&kp TAB>; key-positions = <3 4>; timeout-ms = <20>;
                 };
                 combo_backspace { // R - S
@@ -69,10 +63,7 @@
                 combo_equal { // E - I: Equal
                         bindings = <&kp EQUAL>; key-positions = <20 21>; timeout-ms = <20>;
                 };
-                combo_quote { // I - O: Quote
-                        bindings = <&kp SQT>; key-positions = <21 22>; timeout-ms = <20>;
-                };
-                combo_quote2 { // M - N: Quote alternative
+                combo_quote { // M - N: Quote
                         bindings = <&kp SQT>; key-positions = <18 19>; timeout-ms = <20>;
                 };
                 combo_tilde { // L - U: Tilde symbol
