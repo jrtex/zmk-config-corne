@@ -42,13 +42,13 @@
                         bindings = <&kp ESC>; key-positions = <1 2>; timeout-ms = <20>;
                 };
                 combo_esc2 { // W - F: Escape
-                        bindings = <&kp ESC>; key-positions = <1 2>; timeout-ms = <20>;
+                        bindings = <&kp ESC>; key-positions = <2 3>; timeout-ms = <20>;
                 };
                 combo_tab { // A - R: Tab
                         bindings = <&kp TAB>; key-positions = <13 14>; timeout-ms = <20>;
                 };
                 combo_tab2 { // F - P: Tab
-                        bindings = <&kp TAB>; key-positions = <13 14>; timeout-ms = <20>;
+                        bindings = <&kp TAB>; key-positions = <3 4>; timeout-ms = <20>;
                 };
                 // Right hand
                 combo_dash { // N - E: Dash symbol
