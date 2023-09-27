@@ -34,14 +34,20 @@
                 combo_caps { // LSHIFT - RSHIFT: Caps word
                         bindings = <&caps_word>; key-positions = <24 35>; timeout-ms = <30>;
                 };
-                hr_combo_caps { // LSHIFT - RSHIFT: Caps word
+                hr_combo_caps { // D - H: Caps word
                         bindings = <&caps_word>; key-positions = <28 31>; timeout-ms = <30>;
                 };
                 // Left hand
                 combo_esc { // Q - W: Escape
                         bindings = <&kp ESC>; key-positions = <1 2>; timeout-ms = <20>;
                 };
+                combo_esc2 { // W - F: Escape
+                        bindings = <&kp ESC>; key-positions = <1 2>; timeout-ms = <20>;
+                };
                 combo_tab { // A - R: Tab
+                        bindings = <&kp TAB>; key-positions = <13 14>; timeout-ms = <20>;
+                };
+                combo_tab2 { // F - P: Tab
                         bindings = <&kp TAB>; key-positions = <13 14>; timeout-ms = <20>;
                 };
                 // Right hand
