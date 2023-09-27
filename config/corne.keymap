@@ -69,11 +69,11 @@
                 combo_quote { // I - O: Quote
                         bindings = <&kp SQT>; key-positions = <21 22>; timeout-ms = <20>;
                 };
-                combo_grave { // J - L: grave symbol
-                        bindings = <&kp GRAVE>; key-positions = <6 7>; timeout-ms = <20>;
+                combo_quote2 { // M - N: Quote alternative
+                        bindings = <&kp SQT>; key-positions = <18 19>; timeout-ms = <20>;
                 };
                 combo_tilde { // L - U: Tilde symbol
-                        bindings = <&kp TILDE>; key-positions = <7 8>; timeout-ms = <20>;
+                        bindings = <&tildegr>; key-positions = <7 8>; timeout-ms = <20>;
                 };
                 combo_scln { // U - Y: Semi-colon symbol
                         bindings = <&kp SEMI>; key-positions = <8 9>; timeout-ms = <20>;
@@ -119,6 +119,14 @@
                 flavor = "tap-preferred";
                 bindings = <&kp>, <&kp>;
                 };
+
+                tildegr: tilde_grave {
+                        compatible = "zmk,behavior-mod-morph";
+                        label = "TILDE_GRAVE";
+                        #binding-cells = <0>;
+                        bindings = <&kp TILDE>, <&kp GRAVE>;
+                        mods = <(MOD_LSFT|MOD_RSFT)>;
+                }
         };
         
 
