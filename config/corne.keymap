@@ -52,13 +52,13 @@
                 };
                 combo_backspace { // R - S
                         bindings = <&kp BSPC>; key-positions = <14 15>; timeout-ms = <20>;
-                }
+                };
                 combo_delete { // S - T
                         bindings = <&kp DEL>; key-positions = <14 16>; timeout-ms = <20>;
-                }
+                };
                 combo_delrow { // A - R - S - T
                         bindings = <&kp LC(BSPC)>; key-positions = <13 14 15 16>; timeout-ms = <20>;
-                }
+                };
                 // Right hand
                 combo_dash { // N - E: Dash symbol
                         bindings = <&kp MINUS>; key-positions = <19 20>; timeout-ms = <20>;
@@ -126,7 +126,7 @@
                         #binding-cells = <0>;
                         bindings = <&kp TILDE>, <&kp GRAVE>;
                         mods = <(MOD_LSFT|MOD_RSFT)>;
-                }
+                };
         };
         
 
