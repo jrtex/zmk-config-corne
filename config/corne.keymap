@@ -54,10 +54,13 @@
                         bindings = <&kp BSPC>; key-positions = <14 15>; timeout-ms = <20>;
                 };
                 combo_delete { // S - T
-                        bindings = <&kp DEL>; key-positions = <14 16>; timeout-ms = <20>;
+                        bindings = <&kp DEL>; key-positions = <15 16>; timeout-ms = <20>;
                 };
-                combo_delrow { // A - R - S - T
-                        bindings = <&kp LC(BSPC)>; key-positions = <13 14 15 16>; timeout-ms = <20>;
+                combo_deleteword { // R - S - T
+                        bindings = <&kp LC(BSPC)>; key-positions = <14 15 16>; timeout-ms = <20>;
+                };
+                combo_deleteline { // A - R - S - T
+                        bindings = <&kp LC(LS(BSPC))>; key-positions = <13 14 15 16>; timeout-ms = <20>;
                 };
                 // Right hand
                 combo_dash { // N - E: Dash symbol
