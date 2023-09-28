@@ -16,6 +16,7 @@
 #define NAV 5
 #define DNV 6
 
+int Q=1; W=2; F=3;
 
 &lt {
         tapping-term-ms = <250>;
@@ -39,7 +40,7 @@
                 };
                 // Left hand
                 combo_esc { // W - F: Escape
-                        bindings = <&kp ESC>; key-positions = <2 3>; timeout-ms = <20>;
+                        bindings = <&kp ESC>; key-positions = <W F>; timeout-ms = <20>;
                 };
                 combo_tab { // F - P: Tab
                         bindings = <&kp TAB>; key-positions = <3 4>; timeout-ms = <20>;
