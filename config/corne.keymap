@@ -156,7 +156,7 @@
         keymap {
                 compatible = "zmk,keymap";
 /* 
-// ----------------------------------Layer template------------------------------------------
+// ----------------------------------Layer template----------------------------------------------------------------------------
                         bindings = <
     &trans    &trans    &trans    &trans    &trans    &trans      &trans    &trans    &trans    &trans    &trans    &trans
     &trans    &trans    &trans    &trans    &trans    &trans      &trans    &trans    &trans    &trans    &trans    &trans
@@ -167,11 +167,11 @@
 
                 // Layer 0: DEF
                 default_layer {
-// -----------------------------------------------------------------------------------------
-// |  TAB |  Q  |  W  |  F  |  P  |  B  |   |  J  |  L   |  U  |  Y  |  ;  | BKSP |
-// |  NAV |  A  |  R  |  S  |  T  |  G  |   |  M  |  N   |  E  |  I  |  O  |  '   |
-// | SHFT |  Z  |  X  |  C  |  D  |  V  |   |  K  |  H   |  ,  |  .  |  /  | ESC  |
-//               | OSM-CTRL | NUM | SPC |   | ENT | CHAR | FUN |
+// ----------------------------------------------------------------------------------------------------------------------------
+// |  TAB    |  Q      |  W      |  F      |  P      |  B      | |  J      |  L      |  U      |  Y      |  ;      | BKSP     |
+// |  NAV    |  A      |  R      |  S      |  T      |  G      | |  M      |  N      |  E      |  I      |  O      |  '       |
+// | LSHIFT  |  Z      |  X      |  C      |  D      |  V      | |  K      |  H      |  ,      |  .      |  /      | RSHIFT   |
+//                               | OSM-CTRL| NUM     | SPC     | | ENT     | CHAR    | FUN     |
                         bindings = <
     &kp TAB   &kp Q     &kp W     &kp F     &kp P     &kp B       &kp J     &kp L     &kp U     &kp Y     &kp SEMI  &kp BSPC
     &mo NAV   LTNAVA    &kp R     &kp S     &kp T     &kp G       &kp M     &kp N     &kp E     &kp I     &kp O     &kp SQT
@@ -181,11 +181,11 @@
                 };
                 // layer 1: NUM
                 numb_layer {
-// -----------------------------------------------------------------------------------------
-// |  ESC |  1  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
-// | CTRL |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  O  |      |
-// | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
-//                    |     | --- | SPC |   | ENT | MED |     |
+// ----------------------------------------------------------------------------------------------------------------------------
+// |  ESC    |  !      |  @      |  #      |  $      |  %      | |  ^      |  &      |  *      |  (      |  )      | BKSP     |
+// | CTRL    |  1      |  2      |  3      |  4      |  5      | |  6      |  7      |  8      |  9      |  O      |          |
+// | SHFT    |         |         |         |         |         | |         |         |         |         |         |          |
+//                               |         | ------- | SPC     | | ENT     | MED     |         |
                         bindings = <
     &kp ESC   &kp EXCL  &kp AT    &kp HASH  &kp DLLR  &kp PRCNT   &kp CARET &kp AMPS  STARSBL   &kp LPAR  &kp RPAR  &kp BSPC
     &kp LCTRL &kp N1    &kp N2    &kp N3    &kp N4    &kp N5      &kp N6    &kp N7    &kp N8    &kp N9    &kp N0    &kp SQT
@@ -195,11 +195,11 @@
                 };
                 // layer 2: CHA
                 char_layer {
-// -----------------------------------------------------------------------------------------
-// |  ESC |     |     |     |     |     |   |     |  ~  |  \  |  |  |  `  |      |
-// | CTRL |     |     |     |     |     |   |     |  -  |  _  |  [  |  ]  |      |
-// | CPSW |     |     |     |     |     |   |     |  +  |  =  |  {  |  }  |      |
-//                    |     | MED | SPC |   | ENT | --- |     |
+// ----------------------------------------------------------------------------------------------------------------------------
+// |  ESC    |         |         |         |         |         | |         |  ~      |  \      |  |      |         |          |
+// | CTRL    |         |         |         |         |         | |         |  -      |  _      |  [      |  ]      |          |
+// |         |         |         |         |         |         | |         |  +      |  =      |  {      |  }      |          |
+//                               |         | MED     | SPC     | | ENT     | ------- |         |
                         bindings = <
     &kp ESC   &trans    &trans    &trans    &trans    &trans      &trans    &kp TILDE &kp BSLH  &kp PIPE  &kp GRAVE &trans
     &kp LCTRL &trans    &trans    &trans    &trans    &trans      &trans    &kp MINUS &kp UNDER &kp LBKT  &kp RBKT  &trans
@@ -209,11 +209,11 @@
                 };
                 // layer 3: FUN
                 func_layer {
-// -----------------------------------------------------------------------------------------
-// |      | F1  | F2  | F3  | F4  | F5  |   | F6  | F7  | F8  | F9  | F10 |      |
-// | CTRL | F11 | F12 |     |     |     |   |     |     |     |     |     |      |
-// | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   |     |     |     |     |     |      |
-//                    |     |     |     |   |     |     | --- |
+// ----------------------------------------------------------------------------------------------------------------------------
+// |         | F1      | F2      | F3      | F4      | F5      | | F6      | F7      | F8      | F9      | F10     |          |
+// | CTRL    | F11     | F12     |         |         |         | |         |         |         |         |         |          |
+// | BTCLR   | BT1     | BT2     | BT3     | BT4     | BT5     | |         |         |         |         |         |          |
+//                               |         |         |         | |         |         | ------- |
                         bindings = <
     &trans    &kp F1    &kp F2    &kp F3    &kp F4    &kp F5      &kp F6    &kp F7    &kp F8    &kp F9    &kp F10   &trans
     &kp LCTRL &kp F11   &kp F12   &trans    &trans    &trans      &trans    &trans    &trans    &trans    &trans    &trans
@@ -223,11 +223,11 @@
                 };
                 // layer 4: MED
                 media_layer {
-// -----------------------------------------------------------------------------------------
-// |      |     |     |     |     |     |   |     |     |     |     | VDN |      |
-// |      |     |     |     |     |     |   |     | PRE | PLA | NXT | VUP |      |
-// |      |     |     |     |     |     |   |     |     |     |     |     |      |
-//                    |     | --- |     |   |     | --- |     |
+// ----------------------------------------------------------------------------------------------------------------------------
+// |         |         |         |         |         |         | |         |         |         |         | VOLDN   |         |
+// |         |         |         |         |         |         | |         | PREVIOUS| PLAY    | NEXT    | VOLUP   |         |
+// |         |         |         |         |         |         | |         |         |         |         |         |         |
+//                               |         | ------- |         | |         | ------- |         |
                         bindings = <
     &trans    &trans    &trans    &trans    &trans    &trans      &trans    &trans    &trans    &trans    VOLUMUP   &trans
     &trans    &trans    &trans    &trans    &trans    &trans      &trans    PREVIOUS  &kp C_PP  NEXT      VOLUMDN   &trans
@@ -237,11 +237,11 @@
                 };
                 // layer 5: NAV
                 navigation_layer {
-// -----------------------------------------------------------------------------------------
-// |      |     | C-L | UP  | C-R |     |   |     | INS | HOM | PGU |     | C-BKSP|
-// | ---- |     | LFT | DWN | RGT |     |   |     | DEL | END | PGD |     |      |
-// |      |     |     |     | APP |     |   |     |     |     |     |     |      |
-//                    |     |     |     |   |     |     |     |
+// ----------------------------------------------------------------------------------------------------------------------------
+// |         |         | WORDLFT | UP      | WORDRGT |         | |         | INS     | HOME    | PAGEUP  |         | DELWORD  |
+// | ------- |         | LEFT    | DOWN    | RIGHT   |         | |         | DEL     | END     | PAGEDN  |         |          |
+// |         |         |         |         | APP     |         | |         |         |         |         |         |          |
+//                               |         |         |         | |         |         |         |
                         bindings = <
     &trans    &trans    WORDLEFT  &kp UP    WORDRIGHT &trans      &trans    &kp INS   &kp HOME  &kp PG_UP &trans    DELWORD
     &trans    &trans    &kp LEFT  &kp DOWN  &kp RIGHT &trans      &trans    &kp DEL   &kp END   &kp PG_DN &trans    &trans
@@ -251,11 +251,11 @@
                 };
                 // layer 6: DNV
                 desknav_layer {
-// -----------------------------------------------------------------------------------------
-// |      |     |     | TKV |     |     |   |     |     |     |     |     |      |
-// |      |     | DKL | TKV | DKR |     |   |     |     |     |     |     |      |
-// |      | DEL |S-TAb|ATAB | TAB |     |   |     |     |     |     |     |      |
-//                    |     |     | --- |   |     |     |     |
+// ----------------------------------------------------------------------------------------------------------------------------
+// |         |         |         | TASKVIEW|         |         | |         |         |         |         |         |          |
+// |         |         | DESKL   | TASKVIEW| DESKR   |         | |         |         |         |         |         |          |
+// |         | DEL     | SHIFTTAB| ALT TAB | TAB     |         | |         |         |         |         |         |          |
+//                               |         |         | ------- | |         |         |         |
                         bindings = <
     &trans    &trans    &trans    TASKVIEW  &trans    &trans      &trans    &trans    &trans    &trans    &trans    &trans
     &trans    &trans    DESKLEFT  TASKVIEW  DESKRIGHT &trans      &trans    &trans    &trans    &trans    &trans    &trans
