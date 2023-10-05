@@ -61,7 +61,10 @@
                         bindings = <&kp MINUS>; key-positions = <19 20>; timeout-ms = <20>;
                 };
                 combo_equal { // N - E - I: Equal
-                        bindings = <&kp EQUAL>; key-positions = <19 20 21>; timeout-ms = <20>;
+                        bindings = <&kp EQUAL>; key-positions = <19 20 21>; timeout-ms = <30>;
+                };
+                combo_equal2 { // L - U - Y: Equal
+                        bindings = <&kp EQUAL>; key-positions = <7 8 9>; timeout-ms = <20>;
                 };
                 combo_quote { // E - I: Quote
                         bindings = <&kp SQT>; key-positions = <20 21>; timeout-ms = <20>;
