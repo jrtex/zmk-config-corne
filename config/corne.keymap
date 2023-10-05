@@ -60,11 +60,11 @@
                 combo_dash { // N - E: Dash symbol
                         bindings = <&kp MINUS>; key-positions = <19 20>; timeout-ms = <20>;
                 };
-                combo_equal { // E - I: Equal
-                        bindings = <&kp EQUAL>; key-positions = <20 21>; timeout-ms = <20>;
+                combo_equal { // N - E - I: Equal
+                        bindings = <&kp EQUAL>; key-positions = <19 20 21>; timeout-ms = <20>;
                 };
-                combo_quote { // M - N: Quote
-                        bindings = <&kp SQT>; key-positions = <18 19>; timeout-ms = <20>;
+                combo_quote { // E - I: Quote
+                        bindings = <&kp SQT>; key-positions = <20 21>; timeout-ms = <20>;
                 };
                 combo_tilde { // L - U: Tilde symbol
                         bindings = <&tildegr>; key-positions = <7 8>; timeout-ms = <20>;
