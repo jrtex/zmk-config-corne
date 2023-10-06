@@ -60,13 +60,10 @@
                 combo_dash { // N - E: Dash symbol
                         bindings = <&kp MINUS>; key-positions = <19 20>; timeout-ms = <20>;
                 };
-                combo_equal2 { // M - N: Equal -- Fallback combo
-                        bindings = <&kp EQUAL>; key-positions = <18 19>; timeout-ms = <20>;
-                };
                 combo_quote { // E - I: Quote
                         bindings = <&kp SQT>; key-positions = <20 21>; timeout-ms = <20>;
                 };
-                combo_equal { // N - E - I: Equal -- 3 key combo that doesn't work
+                combo_equal { // N - E - I: Equal
                         bindings = <&kp EQUAL>; key-positions = <19 20 21>; timeout-ms = <30>;
                 };
                 combo_tilde { // L - U: Tilde symbol
