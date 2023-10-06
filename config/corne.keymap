@@ -75,8 +75,8 @@
                 combo_scln { // U - Y: Semi-colon symbol
                         bindings = <&kp SEMI>; key-positions = <8 9>; timeout-ms = <20>;
                 };
-                combo_pipe { // E - U: Pipe symbol
-                        bindings = <&kp PIPE>; key-positions = <8 20>; timeout-ms = <20>;
+                combo_pipe { // N - H: Pipe symbol
+                        bindings = <&kp PIPE>; key-positions = <19 31>; timeout-ms = <20>;
                 };
                 combo_slash { // N - U: Slash (forward)
                         bindings = <&kp FSLH>; key-positions = <8 19>; timeout-ms = <20>;
