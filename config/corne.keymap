@@ -171,8 +171,8 @@
 // ----------------------------------------------------------------------------------------------------------------------------
 // |  TAB    |  Q      |  W      |  F      |  P      |  B      | |  J      |  L      |  U      |  Y      |  ;      | BKSP     |
 // |  NAV    |  A      |  R      |  S      |  T      |  G      | |  M      |  N      |  E      |  I      |  O      |  '       |
-// | LSHIFT  |  Z      |  X      |  C      |  D      |  V      | |  K      |  H      |  ,      |  .      |  /      | RSHIFT   |
-//                               | OSM-CTRL| NUM     | SPC     | | ENT     | CHAR    | FUN     |
+// | LSHIFT  |  Z/GUI  |  X/LALT |  C/LCTL |  D/LSFT |  V      | |  K      |  H/RSFT |  ,/RCTL |  ./RALT |  /-RGUI | RSHIFT   |
+//                               | OSM-CTRL| NUM     | SPACE   | | ENTER   | CHAR    | FUN     |
                         bindings = <
     &kp TAB   &kp Q     &kp W     &kp F     &kp P     &kp B       &kp J     &kp L     &kp U     &kp Y     &kp SEMI  &kp BSPC
     &mo NAV   LTNAVA    &kp R     &kp S     &kp T     &kp G       &kp M     &kp N     &kp E     &kp I     &kp O     &kp SQT
@@ -186,7 +186,7 @@
 // |  ESC    |  !      |  @      |  #      |  $      |  %      | |  ^      |  &      |  *      |  (      |  )      | BKSP     |
 // | CTRL    |  1      |  2      |  3      |  4      |  5      | |  6      |  7      |  8      |  9      |  O      |          |
 // | SHFT    |         |         |         |         |         | |         |         |         |         |         |          |
-//                               |         | ------- | SPC     | | ENT     | MED     |         |
+//                               |         | ------- |         | |         | MED     |         |
                         bindings = <
     &kp ESC   &kp EXCL  &kp AT    &kp HASH  &kp DLLR  &kp PRCNT   &kp CARET &kp AMPS  STARSBL   &kp LPAR  &kp RPAR  &kp BSPC
     &kp LCTRL &kp N1    &kp N2    &kp N3    &kp N4    &kp N5      &kp N6    &kp N7    &kp N8    &kp N9    &kp N0    &kp SQT
@@ -200,7 +200,7 @@
 // |  ESC    |         |         |         |         |         | |         |  ~      |  \      |  |      |         |          |
 // | CTRL    |         |         |         |         |         | |         |  -      |  _      |  [      |  ]      |          |
 // |         |         |         |         |         |         | |         |  +      |  =      |  {      |  }      |          |
-//                               |         | MED     | SPC     | | ENT     | ------- |         |
+//                               |         | MED     |         | |         | ------- |         |
                         bindings = <
     &kp ESC   &trans    &trans    &trans    &trans    &trans      &trans    &kp TILDE &kp BSLH  &kp PIPE  &kp GRAVE &trans
     &kp LCTRL &trans    &trans    &trans    &trans    &trans      &trans    &kp MINUS &kp UNDER &kp LBKT  &kp RBKT  &trans
