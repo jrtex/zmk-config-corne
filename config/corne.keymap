@@ -56,11 +56,17 @@
                 combo_deleteline { // A - R - S - T
                         bindings = <&kp LC(LS(BSPC))>; key-positions = <13 14 15 16>; timeout-ms = <20>;
                 };
+                combo_undo { // Z - X
+                        bindings = <&kp LC(Z)>; key-positions = <25 26>; timeout-ms = <20>;
+                };
                 combo_copy { // X - C
                         bindings = <&kp LC(C)>; key-positions = <26 27>; timeout-ms = <20>;
                 };
                 combo_paste { // C - D
                         bindings = <&kp LC(V)>; key-positions = <27 28>; timeout-ms = <20>;
+                };
+                combo_cut { // X - C - D
+                        bindings = <&kp LC(X)>; key-positions = <26 27 28>; timeout-ms = <20>;
                 };
                 // Right hand
                 combo_dash { // N - E: Dash symbol
