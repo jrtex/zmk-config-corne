@@ -69,7 +69,7 @@
                         bindings = <&kp LC(X)>; key-positions = <26 27 28>; timeout-ms = <20>;
                 };
                 combo_selectline { // D - V
-                        bindings = <&select_line; key-positions = <28 29> timeout-ms = <20>;
+                        bindings = <&select_line; key-positions = <28 29>; timeout-ms = <20>;
                 };
                 // Right hand
                 combo_dash { // N - E: Dash symbol
