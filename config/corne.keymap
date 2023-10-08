@@ -68,6 +68,9 @@
                 combo_cut { // X - C - D
                         bindings = <&kp LC(X)>; key-positions = <26 27 28>; timeout-ms = <20>;
                 };
+                combo_selectline { // D - V
+                        bindings = <&select_line; key-positions = <28 29> timeout-ms = <20>;
+                };
                 // Right hand
                 combo_dash { // N - E: Dash symbol
                         bindings = <&kp MINUS>; key-positions = <19 20>; timeout-ms = <20>;
@@ -111,6 +114,16 @@
                                 , <&macro_tap &kp TAB>
                                 , <&macro_pause_for_release>
                                 , <&macro_release &kp RALT>
+                                ;
+                };
+
+                select_line: select_line {
+                        label = "Select Line";
+                        compatible = "zmk,behavior-macro";
+                        #binding-cells = <0>;
+                        bindings
+                                = <&macro_tap &kp END>
+                                , <&macro_tap &kp LS(HOME)>
                                 ;
                 };
         };
