@@ -52,7 +52,7 @@
                 };
                 combo_newline { // T - G
                         bindings = <&new_line>; key-positions = <16 17>; timeout-ms = <20>;
-                }
+                };
                 combo_deleteword { // R - S - T
                         bindings = <&kp LC(BSPC)>; key-positions = <14 15 16>; timeout-ms = <20>;
                 };
