@@ -51,7 +51,7 @@
                         bindings = <&kp DEL>; key-positions = <15 16>; timeout-ms = <20>;
                 };
                 combo_newline { // T - G
-                        bindings = <&new_line>; key-positions = <16 17>; timeout-ms = <20>;
+                        bindings = <&mm_newline>; key-positions = <16 17>; timeout-ms = <20>;
                 };
                 combo_deleteword { // R - S - T
                         bindings = <&kp LC(BSPC)>; key-positions = <14 15 16>; timeout-ms = <20>;
@@ -139,6 +139,17 @@
                                 , <&macro_tap &kp RET>
                                 ;
                 };
+
+                new_line_up: new_line_up {
+                        label = "New Line Up";
+                        compatible = "zmk,behavior-macro";
+                        #binding-cells = <0>;
+                        bindings
+                                = <&macro_tap &kp UP>
+                                , <&macro_tap &kp END>
+                                , <&macro_tap &kp RET>
+                                ;
+                };
         };
 
         behaviors {
@@ -158,6 +169,14 @@
                         label = "TILDE_GRAVE";
                         #binding-cells = <0>;
                         bindings = <&kp TILDE>, <&kp GRAVE>;
+                        mods = <(MOD_LSFT|MOD_RSFT)>;
+                };
+
+                mm_newline: mm_newline {
+                        compatible = "zmk,behavior-mod-morph";
+                        label = "Mod-morph newline";
+                        #binding-cells = <0>;
+                        bindings = <&new_line>, <&new_line_up>;
                         mods = <(MOD_LSFT|MOD_RSFT)>;
                 };
         };
