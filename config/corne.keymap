@@ -342,7 +342,7 @@
 //                               |         |         | ------- | |         |         |         |
                         bindings = <
     &trans    &trans    &trans    TASKVIEW  &trans    &trans      &trans    &trans    &trans    &trans    &trans    &trans
-    &trans    &trans    DESKLEFT  TASKVIEW  DESKRIGHT &CTRALTTAB  &trans    &trans    &trans    &trans    &trans    &trans
+    &trans    &trans    DESKLEFT  TASKVIEW  DESKRIGHT CTRALTTAB  &trans    &trans    &trans    &trans    &trans    &trans
     &trans    &kp DEL   LSTAB     &alt_tab  &kp TAB   &trans      &trans    &trans    &trans    &trans    &trans    &trans
                                   &trans    &trans    &trans      &trans    &trans    &trans
                         >;
