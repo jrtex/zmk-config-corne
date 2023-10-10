@@ -1,0 +1,77 @@
+layout:
+  qmk_keyboard: corne_rotated
+  qmk_layout: LAYOUT_split_3x6_3
+draw_config:
+  arc_radius: 12
+  # separate_combo_diagrams: true
+layers:
+  Base:
+    - ["Tab", Q, W, F, P, B, J, L, U, Y, ":", "BSpace"]
+    - ["NAV", A, R, S, T, G, M, N, E, I, O, "'"]
+    - ["Shift", {h: Gui, t: Z}, {h: Alt, t: X}, {h: Ctrl, t: C}, {h: Shift, t: D}, V, K, {h: Shift, t: H}, {h: Ctrl, t: ","}, {h: Alt, t: . }, {h: Gui, t: /}, "Shift"]
+    - {h: (Sticky), t: Ctrl}
+    - NUM
+    - {h: DNAV,   t: Space}
+    - Enter
+    - CHAR
+    - FUNC
+  Numbers (NUM):
+    - ["Esc", "!", "@", "#", "$", "%", "^", "&", "*", "(", ")", ""]
+    - ["", 1, 2, 3, 4, 5, 6, 7, 8, 9, 0, ""]
+    - ["", "", "", "", "", "", "", "", "", "", "", ""]
+    - ""
+    - {type: "held"}
+    - ""
+    - ""
+    - "MED"
+    - ""
+  Chararcters (CHAR):
+    - ["", "", "", "", "", "", "", "~", "\\", "|", "`", ""]
+    - ["", "", "", "", "", "", "", "-", "_", "[", "]", ""]
+    - ["", "", "", "", "", "", "", "+", "=", "{", "}", ""]
+    - ""
+    - "MED"
+    - ""
+    - ""
+    - {type: "held"}
+    - ""
+  Functions (FUN):
+    - ["", "F1", "F2", "F3", "F4", "F5", "F6", "F7", "F8", "F9", "F10", ""]
+    - ["", "F11", "F12", "", "", "", "", "", "", "", "", ""]
+    - ["BT Clear", "BT 1", "BT 2", "BT 3", "BT 4", "BT 5", "", "", "", "", "", ""]
+    - ""
+    - ""
+    - ""
+    - ""
+    - ""
+    - {type: "held"}
+  Media (MED):
+    - ["", "", "", "", "", "", "", "", "", "", "Vol Up", ""]
+    - ["", "", "", "", "", "", "", "Prev", "Play", "Next", "Vol Down", ""]
+    - ["", "", "", "", "", "", "", "", "", "", "", ""]
+    - ""
+    - {type: "held"}
+    - ""
+    - ""
+    - {type: "held"}
+    - ""
+  Navigation (NAV):
+    - ["", "", "Word Left", "Up", "Word Rgt", "", "", "Insert", "Home", "Page Up", "", Ctrl BSpace]
+    - [{type: "held"}, "", "Left", "Down", "Right", "", "", "Delete", "End", "Page Down", "", ""]
+    - ["", "", "", "", "", "", "", "", "", "", "", ""]
+    - ""
+    - ""
+    - ""
+    - ""
+    - ""
+    - ""
+  Desktop Navigation (DNAV):
+    - ["", "", "", "Task View", "", "", "", "", "", "", "", ""]
+    - ["", "", "Desk Left", "Task View", "Desk Right", "", "", "", "", "", "", ""]
+    - ["", "Delete", "Shift Tab", "Alt-Tab", "Tab", "", "", "", "", "", "", ""]
+    - ""
+    - ""
+    - {type: "held"}
+    - ""
+    - ""
+    - ""
