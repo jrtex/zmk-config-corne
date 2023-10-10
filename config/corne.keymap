@@ -139,8 +139,8 @@
                                 = <&macro_tap &kp END>
                                 , <&macro_tap &kp LS(HOME)>
                                 , <&macro_tap &kp LS(HOME)>
-                                , <&macro_tab &kp BSPC>
-                                , <&macro_tab &kp BSPC>
+                                , <&macro_tap &kp BSPC>
+                                , <&macro_tap &kp BSPC>
                                 ;
                 };
 
