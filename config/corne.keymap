@@ -90,6 +90,9 @@
                 combo_scln { // U - Y: Semi-colon symbol
                         bindings = <&kp SEMI>; key-positions = <8 9>; timeout-ms = <20>;
                 };
+                combo_cln { // N - I: Colon symbol
+                        bindings = <&kp COLON>; key-positions = <19 21>; timeout-ms = <20>;
+                };
                 combo_pipe { // N - H: Pipe symbol
                         bindings = <&kp PIPE>; key-positions = <19 31>; timeout-ms = <20>;
                 };

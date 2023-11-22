@@ -28,6 +28,7 @@ These are simple horizontal combos, easy to roll while typing. The keys can acce
 * N-E: Dash / Underscore
 * E-I: Single Quote / Double Quotes
 * N-E-I: Equal / Plus
+* N-I: Colon
 * L-U: Tildae 
   * Mod-morph to output backquote on Shift
 * U-Y: Semi-colon / colon

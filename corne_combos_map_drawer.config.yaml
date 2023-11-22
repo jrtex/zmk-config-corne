@@ -25,7 +25,8 @@ combos:
   - {p: [16, 17], k: "New Line", l: ["DEF"]}
   - {p: [19, 20], k: "- _", l: ["DEF"]}
   - {p: [20, 21], k: "' \"", l: ["DEF"]}
-  - {p: [19, 20, 21], k: "=", l: ["DEF"], a: top, o: 1.25, arc_scale: 1.2, slide: 0.5}
+  - {p: [19, 20, 21], k: "= +", l: ["DEF"], a: top, o: 1.2, arc_scale: 1.1, slide: 0.5}
+  - {p: [19, 21], k: ":", l: ["DEF"], a: top, o: 1.85, arc_scale: 1.2, slide: 0.3}
   - {p: [8, 19], k: "/", l: ["DEF"], d: true}
   - {p: [8, 21], k: "\\", l: ["DEF"], d: true}
   - {p: [20, 31], k: "[ {", l: ["DEF"], d: true}
