@@ -108,6 +108,9 @@
                 combo_rbrack { // E - >: Right Bracket
                         bindings = <&kp RBKT>; key-positions = <20 33>; timeout-ms = <20>;
                 };
+                combo_dotdotslash {
+                        bindings = <&dot_dot_slash>; key-positions = <33 34>; timeout-ms = <20>;
+                };
         };
 
         macros {
@@ -176,6 +179,17 @@
                                 = <&macro_tap &kp UP>
                                 , <&macro_tap &kp END>
                                 , <&macro_tap &kp RET>
+                                ;
+                };
+
+                dot_dot_slash: dot_dot_slash {
+                        label = "Dot Dot Slash";
+                        compatible = "zmk,behavior-macro";
+                        #binding-cells = <0>;
+                        bindings
+                                = <&macro_tap &kp DOT>
+                                , <&macro_tap &kp DOT>
+                                , <&macro_tap &kp FSLH>
                                 ;
                 };
         };
