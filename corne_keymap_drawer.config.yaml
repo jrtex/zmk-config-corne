@@ -6,13 +6,13 @@ draw_config:
   # separate_combo_diagrams: true
 layers:
   Base:
-    - ["Tab", Q, W, F, P, B, J, L, U, Y, ":", "BSpace"]
+    - ["Tab", Q, W, F, P, B, J, L, U, Y, ":", $$mdi:backspace-outline$$]
     - ["NAV", A, R, S, T, G, M, N, E, I, O, "'"]
     - ["Shift", {h: Gui, t: Z}, {h: Alt, t: X}, {h: Ctrl, t: C}, {h: Shift, t: D}, V, K, {h: Shift, t: H}, {h: Ctrl, t: ","}, {h: Alt, t: . }, {h: Gui, t: /}, "Shift"]
     - {h: (Sticky), t: Ctrl}
-    - {h: NUM,   t: Tab}
-    - {h: DNAV,   t: Space}
-    - Enter
+    - {h: NUM,   t: $$mdi:keyboard-tab$$}
+    - {h: DNAV,   t: $$mdi:keyboard-space$$}
+    - $$mdi:keyboard-return$$
     - CHAR
     - FUNC
   Numbers (NUM):
