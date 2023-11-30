@@ -10,7 +10,7 @@ layers:
     - ["NAV", A, R, S, T, G, M, N, E, I, O, "'"]
     - ["Shift", {h: Gui, t: Z}, {h: Alt, t: X}, {h: Ctrl, t: C}, {h: Shift, t: D}, V, K, {h: Shift, t: H}, {h: Ctrl, t: ","}, {h: Alt, t: . }, {h: Gui, t: /}, "Shift"]
     - {h: (Sticky), t: Ctrl}
-    - NUM
+    - {h: NUM,   t: Tab}
     - {h: DNAV,   t: Space}
     - Enter
     - CHAR
