@@ -59,6 +59,9 @@
                 combo_deleteline { // A - R - S - T
                         bindings = <&delete_line>; key-positions = <13 14 15 16>; timeout-ms = <20>;
                 };
+                combo_all { // A - R
+                        bindings = <&kp LC(A)>; key-positions = <13 14>; timeout-ms = <20>;
+                };
                 combo_undo { // Z - X
                         bindings = <&kp LC(Z)>; key-positions = <25 26>; timeout-ms = <20>;
                 };

@@ -28,6 +28,7 @@ layers:
 combos:
   - {p: [2, 3], k: "Esc", l: ["Combo"]}
   - {p: [3, 4], k: "Tab", l: ["Combo"]}
+  - {p: [13, 14], k: "Ctrl-A", l: ["Combo"]}
   - {p: [14, 15], k: "Bspace", l: ["Combo"]}
   - {p: [15, 16], k: "Delete", l: ["Combo"]}
   - {p: [16, 17], k: "New Line", l: ["Combo"]}
