@@ -77,8 +77,8 @@
                 combo_selectline { // D - V
                         bindings = <&select_line>; key-positions = <28 29>; timeout-ms = <20>;
                 };
-                combo_ctraltdelete { // Q - A - Z
-                        bindings = <&kp LC(LA(DEL))>; key-positions = <1 13 25>; timeout-ms = <20>;
+                combo_ctraltdelete { // Q - W - F - P
+                        bindings = <&kp LC(LA(DEL))>; key-positions = <1 2 3 4>; timeout-ms = <20>;
                 };
                 // Right hand
                 combo_dash { // N - E: Dash symbol
