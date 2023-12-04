@@ -84,8 +84,8 @@
                         bindings = <&kp LC(LA(DEL))>; key-positions = <1 2 3 4>; timeout-ms = <20>;
                 };
                 // Right hand
-                combo_underscore { // M - N: Underscore symbol
-                        bindings = <&kp UNDER>; key-positions = <18 19>; timeout-ms = <20>;
+                combo_underscore { // L - Y: Underscore symbol
+                        bindings = <&kp UNDER>; key-positions = <7 9>; timeout-ms = <20>;
                 };
                 combo_dash { // N - E: Dash symbol
                         bindings = <&kp MINUS>; key-positions = <19 20>; timeout-ms = <20>;
