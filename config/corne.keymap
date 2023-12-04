@@ -38,6 +38,9 @@
                         bindings = <&caps_word>; key-positions = <28 31>; timeout-ms = <30>;
                 };
                 // Left hand
+                combo_close { // Q - W: Escape
+                        bindings = <&kp LC(W)>; key-positions = <1 2>; timeout-ms = <20>;
+                };
                 combo_esc { // W - F: Escape
                         bindings = <&kp ESC>; key-positions = <2 3>; timeout-ms = <20>;
                 };
