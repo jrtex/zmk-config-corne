@@ -26,24 +26,26 @@ layers:
     - ""
     - ""
 combos:
+  - {p: [1, 2], k: "Ctrl-W", l: ["Combo"], w: 40}
   - {p: [2, 3], k: "Esc", l: ["Combo"]}
   - {p: [3, 4], k: "Tab", l: ["Combo"]}
-  - {p: [13, 14], k: "Ctrl-A", l: ["Combo"]}
-  - {p: [14, 15], k: "Bspace", l: ["Combo"]}
-  - {p: [15, 16], k: "Delete", l: ["Combo"]}
-  - {p: [16, 17], k: "New Line", l: ["Combo"]}
-  - {p: [25, 26], k: "Ctrl-Z", l: ["Combo"]}
-  - {p: [26, 27], k: "Ctrl-C", l: ["Combo"]}
-  - {p: [27, 28], k: "Ctrl-V", l: ["Combo"]}
-  - {p: [26, 27, 28], k: "Ctrl-X", l: ["Combo2"], a: top, o: 0}
-  - {p: [14, 15, 16], k: "Del Word", l: ["Combo2"], a: top, o: 0, arc_scale: 1.2, slide: -0.25}
-  - {p: [13, 14, 15, 16], k: "Del Line", l: ["Combo2"], a: top, o: 0.3, arc_scale: 1.2, slide: -0.6}
-  - {p: [28, 29], k: "Select Line", l: ["Combo"]}
-  - {p: [28, 31], k: "Caps Word", l: ["Combo2"], a: top, o: 0.15, arc_scale: 0.95}
+  - {p: [13, 14], k: "Ctrl-A", l: ["Combo"], w: 40}
+  - {p: [14, 15], k: "Bspace", l: ["Combo"], w: 40}
+  - {p: [15, 16], k: "Delete", l: ["Combo"], w: 40}
+  - {p: [16, 17], k: "New Line", l: ["Combo"], w: 35}
+  - {p: [25, 26], k: "Ctrl-Z", l: ["Combo"], w: 40}
+  - {p: [26, 27], k: "Ctrl-C", l: ["Combo"], w: 40}
+  - {p: [27, 28], k: "Ctrl-V", l: ["Combo"], w: 40}
+  - {p: [26, 27, 28], k: "Ctrl-X", l: ["Combo2"], a: top, o: 0, w: 40}
+  - {p: [14, 15, 16], k: "Del Word", l: ["Combo2"], a: top, o: 0, arc_scale: 1.2, slide: -0.25, w: 35}
+  - {p: [13, 14, 15, 16], k: "Del Line", l: ["Combo2"], a: top, o: 0.3, arc_scale: 1.2, slide: -0.6, w: 35}
+  - {p: [28, 29], k: "Select Line", l: ["Combo"], w: 35}
+  - {p: [28, 31], k: "Caps Word", l: ["Combo2"], a: top, o: 0.15, arc_scale: 0.95, w: 35}
   - {p: [7, 8],   k: "~ `", l: ["Combo"], a: top}
-  - {p: [8, 9], k: "; :", l: ["Combo"], a: top}
-  - {p: [19, 20], k: "- _", l: ["Combo"]}
-  - {p: [20, 21], k: "' \"", l: ["Combo"]}
+  - {p: [8, 9], k: ";", l: ["Combo"], a: top}
+  - {p: [19, 20], k: "-", l: ["Combo"]}
+  - {p: [20, 21], k: "'", l: ["Combo"]}
+  - {p: [21, 22], k: "\"", l: ["Combo"]}
   - {p: [19, 20, 21], k: "= +", l: ["Combo"], a: top, o: 0, arc_scale: 1, slide: 0.5}
   - {p: [19, 21], k: ":", l: ["Combo"], a: top, o: 0.5, arc_scale: 1.1, slide: -0.25}
   - {p: [33, 34], k: "../", l: ["Combo"]}
@@ -52,3 +54,4 @@ combos:
   - {p: [20, 31], k: "[ {", l: ["Combo2"], d: true}
   - {p: [20, 33], k: "] }", l: ["Combo2"], d: true}
   - {p: [31, 19], k: "|", l: ["Combo"], a: left}
+  - {p: [14, 15, 16], k: "Ctrl-Alt-Delete", l: ["Combo2"], a: top, o: 0, arc_scale: 1.2, slide: -0.25, w: 35}
