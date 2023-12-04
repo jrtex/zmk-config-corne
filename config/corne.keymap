@@ -38,7 +38,7 @@
                         bindings = <&caps_word>; key-positions = <28 31>; timeout-ms = <30>;
                 };
                 // Left hand
-                combo_close { // Q - W: Escape
+                combo_close { // Q - W: Ctrl-W
                         bindings = <&kp LC(W)>; key-positions = <1 2>; timeout-ms = <20>;
                 };
                 combo_esc { // W - F: Escape
@@ -84,11 +84,17 @@
                         bindings = <&kp LC(LA(DEL))>; key-positions = <1 2 3 4>; timeout-ms = <20>;
                 };
                 // Right hand
+                combo_underscore { // M - N: Underscore symbol
+                        bindings = <&kp UNDER>; key-positions = <18 19>; timeout-ms = <20>;
+                };
                 combo_dash { // N - E: Dash symbol
                         bindings = <&kp MINUS>; key-positions = <19 20>; timeout-ms = <20>;
                 };
                 combo_quote { // E - I: Quote
                         bindings = <&kp SQT>; key-positions = <20 21>; timeout-ms = <20>;
+                };
+                combo_doublequote { // I - O: Double Quote
+                        bindings = <&kp DQT>; key-positions = <21 22>; timeout-ms = <20>;
                 };
                 combo_equal { // N - E - I: Equal
                         bindings = <&kp EQUAL>; key-positions = <19 20 21>; timeout-ms = <30>;
