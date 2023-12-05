@@ -47,6 +47,12 @@
                 combo_tab { // F - P: Tab
                         bindings = <&kp TAB>; key-positions = <3 4>; timeout-ms = <20>;
                 };
+                combo_ctraltdelete { // Q - W - F - P
+                        bindings = <&kp LC(LA(DEL))>; key-positions = <1 2 3 4>; timeout-ms = <20>;
+                };
+                combo_all { // A - R
+                        bindings = <&kp LC(A)>; key-positions = <13 14>; timeout-ms = <20>;
+                };
                 combo_backspace { // R - S
                         bindings = <&kp BSPC>; key-positions = <14 15>; timeout-ms = <20>;
                 };
@@ -61,9 +67,6 @@
                 };
                 combo_deleteline { // A - R - S - T
                         bindings = <&delete_line>; key-positions = <13 14 15 16>; timeout-ms = <20>;
-                };
-                combo_all { // A - R
-                        bindings = <&kp LC(A)>; key-positions = <13 14>; timeout-ms = <20>;
                 };
                 combo_undo { // Z - X
                         bindings = <&kp LC(Z)>; key-positions = <25 26>; timeout-ms = <20>;
@@ -80,10 +83,19 @@
                 combo_selectline { // D - V
                         bindings = <&select_line>; key-positions = <28 29>; timeout-ms = <20>;
                 };
-                combo_ctraltdelete { // Q - W - F - P
-                        bindings = <&kp LC(LA(DEL))>; key-positions = <1 2 3 4>; timeout-ms = <20>;
-                };
                 // Right hand
+                combo_bqt { // J - L: Back Quote
+                        bindings = <&kp GRAVE>; key-positions = <6 7>; timeout-ms = <20>;
+                };
+                combo_tilde { // L - U: Tilde symbol
+                        bindings = <&tildegr>; key-positions = <7 8>; timeout-ms = <20>;
+                };
+                combo_scln { // U - Y: Semi-colon symbol
+                        bindings = <&kp SEMI>; key-positions = <8 9>; timeout-ms = <20>;
+                };
+                combo_plus { // L - U - Y: Plus Symbol
+                        bindings = <&kp PLUS>; key-positions = <7 8 9>; timeout-ms = <30>;
+                };
                 combo_underscore { // M - N Underscore symbol
                         bindings = <&kp UNDER>; key-positions = <18 19>; timeout-ms = <20>;
                 };
@@ -99,23 +111,14 @@
                 combo_equal { // N - E - I: Equal
                         bindings = <&kp EQUAL>; key-positions = <19 20 21>; timeout-ms = <30>;
                 };
-                combo_bqt { // J - L: Back Quote
-                        bindings = <&kp GRAVE>; key-positions = <6 7>; timeout-ms = <20>;
-                };
-                combo_tilde { // L - U: Tilde symbol
-                        bindings = <&tildegr>; key-positions = <7 8>; timeout-ms = <20>;
-                };
-                combo_scln { // U - Y: Semi-colon symbol
-                        bindings = <&kp SEMI>; key-positions = <8 9>; timeout-ms = <20>;
-                };
-                combo_plus { // L - U - Y
-                        bindings = <&kp PLUS>; key-positions = <7 8 9>; timeout-ms = <30>;
-                };
                 combo_cln { // N - I: Colon symbol
                         bindings = <&kp COLON>; key-positions = <19 21>; timeout-ms = <20>;
                 };
                 combo_pipe { // M - J: Pipe symbol
                         bindings = <&kp PIPE>; key-positions = <6 18>; timeout-ms = <20>;
+                };
+                combo_dotdotslash {
+                        bindings = <&dot_dot_slash>; key-positions = <33 34>; timeout-ms = <20>;
                 };
                 combo_slash { // N - U: Slash (forward)
                         bindings = <&kp FSLH>; key-positions = <8 19>; timeout-ms = <20>;
@@ -128,9 +131,6 @@
                 };
                 combo_rbrack { // E - >: Right Bracket
                         bindings = <&kp RBKT>; key-positions = <20 33>; timeout-ms = <20>;
-                };
-                combo_dotdotslash {
-                        bindings = <&dot_dot_slash>; key-positions = <33 34>; timeout-ms = <20>;
                 };
         };
 
