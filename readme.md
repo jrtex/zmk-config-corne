@@ -23,38 +23,44 @@ Combos have been very easy to implement and get used to. I quickly added many co
 
 **Simple shapes**
 
-These are simple horizontal combos, easy to roll while typing. The keys can access their ANSI shifted version with Shift, the only exception being Tildae/Backquote.
+These are simple horizontal combos, easy to roll while typing. 
 
-* N-E: Dash / Underscore
-* E-I: Single Quote / Double Quotes
-* N-E-I: Equal / Plus
+All keys can access their ANSI shifted version with Shift, the only exception being Tildae/Backquote.
+
+* M-N: Underscore
+* N-E: Dash
+* E-I: Single Quote
+* I-O: Double Quote
+* N-E-I: Equal
 * N-I: Colon
+* J-L: Back Quote
 * L-U: Tildae 
   * Mod-morph to output backquote on Shift
-* U-Y: Semi-colon / colon
-  * Optional, but may help you move the Backspace on the pinky if planning on downshifting to 5 columns
+* U-Y: Semi-colon
+* L-U-Y: Plus
 
 **Other Shapes**
 
 Those combos includes keys on two rows. Their shapes make them easy to remember:
 
-* N-U: Forward slash / Question mark
-  * Optional since slash/question-mark is available on the main layer, but added here for completeness
-* U-I: Backslash / Pipe
+* N-U: Forward slash
+* U-I: Backslash
 * H-E: Left Square Bracket / Curly Bracket
 * E-'.': Right Square Bracket / Curly Bracket
-* H-N: Pipe
+* J-M: Pipe
 
 ### Left Hand Combos
 
+* Q-W: Close (Ctrl-W)
 * W-F: Escape
 * F-P: Tab
-* R-S: Backslash
-* R-S-T: Delete Word (Ctrl + Backslash)
+* A-R: Select All (Ctrl-A)
+* R-S: Backspace
+* R-S-T: Delete Word (Ctrl-Backslash)
 * A-R-S-T: Delete line (macro)
 * S-T: Delete
 * T-G: New line below (macro)
-  * Mod-morphed to output New line above (macro), vim style
+  * Mod-morphed to output New line above (macro), vim-style
 * Z-X: Undo (Ctrl + Z)
 * X-C: Copy (Ctrl + C)
 * X-C-D: Cut (Ctrl + X)
