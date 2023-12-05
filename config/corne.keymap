@@ -84,8 +84,8 @@
                         bindings = <&kp LC(LA(DEL))>; key-positions = <1 2 3 4>; timeout-ms = <20>;
                 };
                 // Right hand
-                combo_underscore { // L - Y: Underscore symbol
-                        bindings = <&kp UNDER>; key-positions = <7 9>; timeout-ms = <20>;
+                combo_underscore { // M - N Underscore symbol
+                        bindings = <&kp UNDER>; key-positions = <18 19>; timeout-ms = <20>;
                 };
                 combo_dash { // N - E: Dash symbol
                         bindings = <&kp MINUS>; key-positions = <19 20>; timeout-ms = <20>;
@@ -99,17 +99,23 @@
                 combo_equal { // N - E - I: Equal
                         bindings = <&kp EQUAL>; key-positions = <19 20 21>; timeout-ms = <30>;
                 };
+                combo_bqt { // J - L: Back Quote
+                        bindings = <&kp GRAVE>; key-positions = <6 7>; timeout-ms = <20>;
+                };
                 combo_tilde { // L - U: Tilde symbol
                         bindings = <&tildegr>; key-positions = <7 8>; timeout-ms = <20>;
                 };
                 combo_scln { // U - Y: Semi-colon symbol
                         bindings = <&kp SEMI>; key-positions = <8 9>; timeout-ms = <20>;
                 };
+                combo_plus { // L - U - Y
+                        bindings = <&kp PLUS>; key-positions = <7 8 9>; timeout-ms = <30>;
+                };
                 combo_cln { // N - I: Colon symbol
                         bindings = <&kp COLON>; key-positions = <19 21>; timeout-ms = <20>;
                 };
-                combo_pipe { // N - H: Pipe symbol
-                        bindings = <&kp PIPE>; key-positions = <19 31>; timeout-ms = <20>;
+                combo_pipe { // M - J: Pipe symbol
+                        bindings = <&kp PIPE>; key-positions = <6 18>; timeout-ms = <20>;
                 };
                 combo_slash { // N - U: Slash (forward)
                         bindings = <&kp FSLH>; key-positions = <8 19>; timeout-ms = <20>;
