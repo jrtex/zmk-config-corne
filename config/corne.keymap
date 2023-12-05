@@ -227,6 +227,17 @@
                         bindings = <&kp>, <&kp>;
                 };
 
+                lt_rpi: layertap_requireprioridle {
+                        compatible = "zmk,behavior-hold-tap";
+                        label = "RPI LAYER TAP";
+                        #binding-cells = <2>;
+                        tapping-term-ms = <200>;
+                        quick-tap-ms = <0>;
+                        require-prior-idle-ms = <100>;
+                        flavor = "tap-preferred";
+                        bindings = <&mo>, <&kp>;
+                };
+
                 lt_hp: layertap_holdpreferred {
                         compatible = "zmk,behavior-hold-tap";
                         label = "HP LAYER TAP";
@@ -255,7 +266,7 @@
         };
 
 // Max 9 characters per key
-#define LTNAVA    &lt NAV A
+#define LTNAVA    &lt_rpi NAV A
 #define HMLGUIZ   &hm LGUI Z
 #define HMLALTX   &hm LALT X
 #define HMLCTLC   &hm LCTRL C
@@ -264,7 +275,7 @@
 #define HMRCTLCOM &hm RCTRL COMMA
 #define HMRALTDOT &hm RALT DOT
 #define HMRGUISLH &hm RGUI FSLH
-#define LTDNVSPAC &lt DNV SPACE
+#define LTDNVSPAC &lt_rpi DNV SPACE
 #define LTNUMTAB  &lt_hp NUM TAB
 #define STARSBL   &kp KP_MULTIPLY
 #define BTCLR     &bt BT_CLR
