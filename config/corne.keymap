@@ -38,8 +38,8 @@
                         bindings = <&caps_word>; key-positions = <28 31>; timeout-ms = <30>;
                 };
                 // Left hand
-                combo_close { // Q - W: Ctrl-W
-                        bindings = <&kp LC(W)>; key-positions = <1 2>; timeout-ms = <20>;
+                combo_close { // Q - W: Ctrl-W / Alt-F4
+                        bindings = <&td_close>; key-positions = <1 2>; timeout-ms = <20>;
                 };
                 combo_esc { // W - F: Escape
                         bindings = <&kp ESC>; key-positions = <2 3>; timeout-ms = <20>;
@@ -269,6 +269,13 @@
                         #binding-cells = <0>;
                         tapping-term-ms = <200>;
                         bindings = <&alt_tab>, <&kp LC(LA(TAB))>;
+                };
+
+                td_close: td_close {
+                        compatible = "zmk,behavior-tap-dance";
+                        #binding-cells = <0>;
+                        tapping-term-ms = <200>;
+                        bindings = <&kp LC(W)>, <&kp LA(F4))>;
                 };
         };
 
