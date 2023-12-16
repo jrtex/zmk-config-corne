@@ -277,6 +277,13 @@
                         tapping-term-ms = <200>;
                         bindings = <&kp LC(W)>, <&kp LA(F4)>;
                 };
+
+                td_nav: td_navlayer {
+                        compatible = "zmk,behavior-tap-dance";
+                        #binding-cells = <0>;
+                        tapping-term-ms = <200>;
+                        bindings = <&lt_rpi DNV SPACE>, <&lt_rpi NAV SPACE>;
+                };
         };
 
 // Max 9 characters per key
@@ -289,7 +296,7 @@
 #define HMRCTLCOM &hm RCTRL COMMA
 #define HMRALTDOT &hm RALT DOT
 #define HMRGUISLH &hm RGUI FSLH
-#define LTDNVSPAC &lt_rpi DNV SPACE
+#define LTDNVSPAC &td_nav
 #define LTNUMTAB  &lt_hp NUM TAB
 #define STARSBL   &kp KP_MULTIPLY
 #define BTCLR     &bt BT_CLR
