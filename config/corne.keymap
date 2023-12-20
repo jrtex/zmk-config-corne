@@ -15,6 +15,7 @@
 #define MED 4
 #define NAV 5
 #define DNV 6
+#define ZNV 7
 
 
 &lt {
@@ -298,6 +299,7 @@
 #define HMRGUISLH &hm RGUI FSLH
 #define LTDNVSPAC &lt_rpi DNV SPACE
 #define LTNUMTAB  &lt_hp NUM TAB
+#define LTZNVRET  &lt_rpi ZNV RETURN
 #define STARSBL   &kp KP_MULTIPLY
 #define BTCLR     &bt BT_CLR
 #define BTSEL0    &bt BT_SEL 0
@@ -317,6 +319,16 @@
 #define DESKRIGHT &kp LC(RG(RIGHT))
 #define LSTAB     &kp LS(TAB)
 #define CTRALTTAB &kp LC(LA(TAB))
+#define ZMOVELEFT &kp LG(LA(LC(LEFT)))
+#define ZMOVERGHT &kp LG(LA(LC(LEFT)))
+#define ZNAV1     &kp LG(LC(N1))
+#define ZNAV2     &kp LG(LC(N2))
+#define ZNAV3     &kp LG(LC(N3))
+#define ZNAV4     &kp LG(LC(N4))
+#define WLEFT     &kp LG(LEFT)
+#define WUP       &kp LG(UF)
+#define WDOWN     &kp LG(DOWN)
+#define WRIGHT    &kp LG(RIGHT)
 
         keymap {
                 compatible = "zmk,keymap";
@@ -341,7 +353,7 @@
     &kp TAB   &kp Q     &kp W     &kp F     &kp P     &kp B       &kp J     &kp L     &kp U     &kp Y     &kp SEMI  &kp BSPC
     &mo NAV   LTNAVA    &kp R     &kp S     &kp T     &kp G       &kp M     &kp N     &kp E     &kp I     &kp O     &kp SQT
     &kp LSHFT HMLGUIZ   HMLALTX   HMLCTLC   HMLSFTD   &kp V       &kp K     HMRSFTH   HMRCTLCOM HMRALTDOT HMRGUISLH &kp RSHFT
-                                  &sk LCTRL LTNUMTAB  LTDNVSPAC   &kp RET   &mo CHR   &mo FUN
+                                  &sk LCTRL LTNUMTAB  LTDNVSPAC   LTZNVRET  &mo CHR   &mo FUN
                         >;
                 };
                 // layer 1: NUM
@@ -425,6 +437,20 @@
     &trans    &trans    &trans    TASKVIEW  &trans    &trans      &trans    &trans    &trans    &trans    &trans    &trans
     &trans    &trans    DESKLEFT  TASKVIEW  DESKRIGHT CTRALTTAB   &trans    &trans    &trans    &trans    &trans    &trans
     &trans    &kp DEL   LSTAB     &td_alttab &kp TAB  &trans      &trans    &trans    &trans    &trans    &trans    &trans
+                                  &trans    &trans    &trans      &trans    &trans    &trans
+                        >;
+                };
+                // layer 7: ZNV (ZVirtualDesktop navigation)
+                znav_layer {
+// ----------------------------------------------------------------------------------------------------------------------------
+// |         | Desk 1  | Desk 2  | Desk 3   | Desk 4  |         | |         |         | WinUp   |         |         |          |
+// |         |         | MoveWinL|          | MoveWinR|         | |         | WinLeft | WinDown | WinRight|         |          |
+// |         |         |         |          |         |         | |         |         |         |         |         |          |
+//                               |          |         | ------- | |         |         |         |
+                        bindings = <
+    &trans    ZNAV1     ZNAV2     ZNAV3     ZNAV4     &trans      &trans    &trans    WUP       &trans    &trans    &trans
+    &trans    &trans    ZMOVELEFT &trans    ZMOVERGHT &trans      &trans    WLEFT     WDOWN     WRIGHT    &trans    &trans
+    &trans    &trans    &trans    &trans    &trans    &trans      &trans    &trans    &trans    &trans    &trans    &trans
                                   &trans    &trans    &trans      &trans    &trans    &trans
                         >;
                 };
