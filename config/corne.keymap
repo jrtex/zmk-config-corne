@@ -325,10 +325,10 @@
 #define ZNAV2     &kp LG(LC(N2))
 #define ZNAV3     &kp LG(LC(N3))
 #define ZNAV4     &kp LG(LC(N4))
-#define WLEFT     &kp LG(LEFT)
-#define WUP       &kp LG(UP)
-#define WDOWN     &kp LG(DOWN)
-#define WRIGHT    &kp LG(RIGHT)
+#define WLEFT     &kp RG(LEFT)
+#define WUP       &kp RG(UP)
+#define WDOWN     &kp RG(DOWN)
+#define WRIGHT    &kp RG(RIGHT)
 
         keymap {
                 compatible = "zmk,keymap";
