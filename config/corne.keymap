@@ -134,7 +134,7 @@
                         bindings = <&kp RBKT>; key-positions = <20 33>; timeout-ms = <20>;
                 };
                 combo_autocrct { // K - N: Autocorrect macro
-                        bindings = <&autocrct>; key-positions = <19 30>; timeout-ms = <20>;
+                        bindings = <&autocrct>; key-positions = <30 31>; timeout-ms = <20>;
                 };
         };
 
