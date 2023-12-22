@@ -133,6 +133,9 @@
                 combo_rbrack { // E - >: Right Bracket
                         bindings = <&kp RBKT>; key-positions = <20 33>; timeout-ms = <20>;
                 };
+                combo_autocrct { // K - N: Autocorrect macro
+                        bindings = <&autocrct>; key-positions = <19 30>; timeout-ms = <20>;
+                }
         };
 
         macros {
@@ -212,6 +215,17 @@
                                 = <&macro_tap &kp DOT>
                                 , <&macro_tap &kp DOT>
                                 , <&macro_tap &kp FSLH>
+                                ;
+                };
+
+                autocrct: autocorrect {
+                        label = "Autocorrect";
+                        compatible = "zmk,behavior-macro";
+                        #binding-cells = <0>;
+                        bindings
+                                = <&macro_tap &kp K_APP>
+                                , <&macro_tap &kp DOWN>
+                                , <&macro_tap &kp RETURN>
                                 ;
                 };
         };
