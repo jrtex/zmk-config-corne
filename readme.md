@@ -1,5 +1,23 @@
 # ZMK Config Corne
 
+
+## Highlights
+
+- Colemak-DH alpha base
+- Bottom-Row mods, aka Home-row mods on the bottomw row
+  - Use of both tap-preferred and hold-prefererd Layer-tap options
+- TKL layer under home row, for instant access to arrow keys and Home-block
+- Heavy use of combos:
+  - Utility combos on left hand
+  - Symbol character combos on right hand
+  - Include 3 and 4-key linear combos, and non-adjacent 2-key combos
+- Focus on providing useful functionality with left-hand only while right hand is using the mouse
+  - Copy/paste, delete, backspace combos
+  - Desktop navigation layer
+  - Arrow cluster layer
+- Desktop navigation layer for management of Windows virtual desktops
+- Reduce reliance on outer rows and inner thumb keys for eventual move to 34-key layout
+
 ## Keymap
 
 <img src="img/corne_keymap.png">

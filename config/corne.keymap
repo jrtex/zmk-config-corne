@@ -266,7 +266,7 @@
                 };
 
                 mm_delword: mm_delword {
-                        compatigle = "zmk,behavior-mod-morph";
+                        compatible = "zmk,behavior-mod-morph";
                         label = "Mod-morph delete word";
                         #binding-cells = <0>;
                         bindings = <&kp LC(BSPC)>, <&kp LC(DEL)>;
