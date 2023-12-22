@@ -135,7 +135,7 @@
                 };
                 combo_autocrct { // K - N: Autocorrect macro
                         bindings = <&autocrct>; key-positions = <19 30>; timeout-ms = <20>;
-                }
+                };
         };
 
         macros {
