@@ -52,7 +52,7 @@
                         bindings = <&kp LC(LA(DEL))>; key-positions = <1 2 3 4>; timeout-ms = <20>;
                 };
                 combo_all { // A - R
-                        bindings = <&kp LC(A)>; key-positions = <13 14>; timeout-ms = <20>;
+                        bindings = <&mm_delword>; key-positions = <13 14>; timeout-ms = <20>;
                 };
                 combo_backspace { // R - S
                         bindings = <&kp BSPC>; key-positions = <14 15>; timeout-ms = <20>;
@@ -262,6 +262,14 @@
                         label = "Mod-morph newline";
                         #binding-cells = <0>;
                         bindings = <&new_line>, <&new_line_up>;
+                        mods = <(MOD_LSFT|MOD_RSFT)>;
+                };
+
+                mm_delword: mm_delword {
+                        compatigle = "zmk,behavior-mod-morph";
+                        label = "Mod-morph delete word";
+                        #binding-cells = <0>;
+                        bindings = <&kp LC(BSPC)>, <&kp LC(DEL)>;
                         mods = <(MOD_LSFT|MOD_RSFT)>;
                 };
 
