@@ -1,5 +1,8 @@
 # ZMK Config Corne
 
+This is my personal keymap's ZMK configuaration. It is designed for a 42-key Corne v3 keyboard, but can be re-used for other larger keyboards, and provide enough redundancy to be useable on a 5-column/34-key split keyboard.
+
+This layout has evolved from a 60% keyboard, originally using QMK, to progressively smaller boards by taking advantages of the many features made available in custom keyboard firmware, in particular combos and numerous thumb-activated layers.
 
 ## Highlights
 
@@ -16,7 +19,14 @@
   - Desktop navigation layer
   - Arrow cluster layer
 - Desktop navigation layer for management of Windows virtual desktops
-- Reduce reliance on outer rows and inner thumb keys for eventual move to 34-key layout
+- Reduce reliance on outer rows and outer thumb keys for eventual move to 34-key layout
+
+### To Do
+- Take advantage of [zmk-nodefree-config](https://github.com/urob/zmk-nodefree-config) in order to simplify the keymap.
+- Build a personal version of ZMK to take advantages of features that have not merged to the main ZMK repo. Such as:
+  - [Smart-layers for ZMK](https://github.com/zmkfirmware/zmk/pull/1451), especially for the Number layer
+  - [tri-state](https://github.com/zmkfirmware/zmk/pull/1366), for an easy alt-tab shortcut
+- Find a solution to the conflict between home-row mods and combos (E.g. Holding `CD` will usually trigger the combo placed on the two keys rather than hold `LSFHIT + LCTRL`).
 
 ## Keymap
 
@@ -28,59 +38,26 @@
 
 Combos have been very easy to implement and get used to. I quickly added many combos to replace my symbols layer, while also adding extra functionality. The combos are organized by hand; the right hand combos include all the symbols and characters used while typing, whereas the left hand combos cover functionality that can be helpful while my right hand is using the mouse.
 
-**A few thoughts**:
+### Symbol Combos
 
-* As of the current ZMK version, combos may conflict with tap/hold modifiers when activating several modifiers simultaneously. This keymap mostly avoids this issue with bottom-row-mods, so home-row combos are not affected. A few combos are present on the left-hand, so left-hand mods must be pressed sequentially to avoid triggering the combos.
-* I found that combos that use only pinky/ring-finger are harder to activate. I only have a few of those, but prefer to keep all combos on the 3 stronger fingers.
+* The characters `-`, `'`, `:`, `"` and `=` are available on the homerow, since they are the most common symbol characters in english text. In particular the apostrophe character, due to being placed on `EI` next to `N`, results in a very satisfying roll on the `n't` trigram (I'll admit, more due to luck than planning).
+* The symbols `~`, `;` and `+`, accessible on the top row for easy access while writing code.
+* `_` and `\`` are less common, and accessed by alt-fingering on the home row and top row respectively.
+* The characters also used in programming `/`, `\`, `[ {`, `] }`, and `|` are accessed using non-linear combos. While I generally try to avoid non-linear combos, the shape of those combos match the character, so they do make some sense.
+* Finally, a macro for `../` is available on `.` and `/`, which makes navigating backwards in terminal much easier.
+
+### Utility Combos
+
+* `Backspace`, `Delete`, and additional macros for deleting words/lines are available on the left-hand homerow.
+* `Esc` and `Tab` on the top row. 
+* Copy, Paste and other Ctrl-based commands on the bottow row, plus Select-All (`Ctrl-A`) on `AR`.
+* Macros `Select-Line` and `Open new line` are accessible on the alt-finger positions.
 
 <img src="img/corne_combos_map.png">
 
 > Drawn with [Keymap Drawer](/caksoylar/keymap-drawer)
 
-### Right Hand Combos
+**A few thoughts**:
 
-**Simple shapes**
-
-These are simple horizontal combos, easy to roll while typing. 
-
-All keys can access their ANSI shifted version with Shift, the only exception being Tildae/Backquote.
-
-* M-N: Underscore
-* N-E: Dash
-* E-I: Single Quote
-* I-O: Double Quote
-* N-E-I: Equal
-* N-I: Colon
-* J-L: Back Quote
-* L-U: Tildae 
-  * Mod-morph to output backquote on Shift
-* U-Y: Semi-colon
-* L-U-Y: Plus
-
-**Other Shapes**
-
-Those combos includes keys on two rows. Their shapes make them easy to remember:
-
-* N-U: Forward slash
-* U-I: Backslash
-* H-E: Left Square Bracket / Curly Bracket
-* E-'.': Right Square Bracket / Curly Bracket
-* J-M: Pipe
-
-### Left Hand Combos
-
-* Q-W: Close (Ctrl-W)
-* W-F: Escape
-* F-P: Tab
-* A-R: Select All (Ctrl-A)
-* R-S: Backspace
-* R-S-T: Delete Word (Ctrl-Backslash)
-* A-R-S-T: Delete line (macro)
-* S-T: Delete
-* T-G: New line below (macro)
-  * Mod-morphed to output New line above (macro), vim-style
-* Z-X: Undo (Ctrl + Z)
-* X-C: Copy (Ctrl + C)
-* X-C-D: Cut (Ctrl + X)
-* C-D: Paste (Ctrl + V)
-* D-V: Select current line (macro)
+* As of the current ZMK version, combos may conflict with tap/hold modifiers when activating several modifiers simultaneously. This keymap mostly avoids this issue with bottom-row-mods, so home-row combos are not affected. A few combos are present on the left-hand, so left-hand mods must be pressed sequentially to avoid triggering the combos.
+* I found that combos that use only pinky/ring-finger are harder to activate. They require getting used-to, so I'm using only for less commonly used functions.
