@@ -10,12 +10,12 @@
 
 #define DEF 0
 #define NUM 1
-#define CHR 2
-#define FUN 3
-#define MED 4
-#define NAV 5
-#define DNV 6
-#define ZNV 7
+// #define CHR 2
+#define FUN 2
+#define MED 3
+#define NAV 4
+#define DNV 5
+#define ZNV 6
 
 
 &lt {
@@ -322,6 +322,7 @@
 #define LTDNVSPAC &lt_rpi DNV SPACE
 #define LTNUMTAB  &lt_hp NUM TAB
 #define LTZNVRET  &lt_rpi ZNV RETURN
+#define LTFUNESC  &lt_hp FUN ESC
 #define STARSBL   &kp KP_MULTIPLY
 #define BTCLR     &bt BT_CLR
 #define BTSEL0    &bt BT_SEL 0
@@ -370,12 +371,12 @@
 // |  TAB    |  Q      |  W      |  F      |  P      |  B      | |  J      |  L      |  U      |  Y      |  ;      | BKSP     |
 // |  NAV    |  A      |  R      |  S      |  T      |  G      | |  M      |  N      |  E      |  I      |  O      |  '       |
 // | LSHIFT  |  Z/GUI  |  X/LALT |  C/LCTL |  D/LSFT |  V      | |  K      |  H/RSFT |  ,/RCTL |  ./RALT |  /-RGUI | RSHIFT   |
-//                               | OSM-CTRL| NUM     | SPACE   | | ENTER   | CHAR    | FUN     |
+//                               | ------- | NUM     | SPACE   | | ENTER   | FUN     | ------- |
                         bindings = <
     &kp TAB   &kp Q     &kp W     &kp F     &kp P     &kp B       &kp J     &kp L     &kp U     &kp Y     &kp SEMI  &kp BSPC
     &mo NAV   LTNAVA    &kp R     &kp S     &kp T     &kp G       &kp M     &kp N     &kp E     &kp I     &kp O     &kp SQT
     &kp LSHFT HMLGUIZ   HMLALTX   HMLCTLC   HMLSFTD   &kp V       &kp K     HMRSFTH   HMRCTLCOM HMRALTDOT HMRGUISLH &kp RSHFT
-                                  &sk LCTRL LTNUMTAB  LTDNVSPAC   LTZNVRET  &mo CHR   &mo FUN
+                                  &none     LTNUMTAB  LTDNVSPAC   LTZNVRET  LTFUNESC  &none
                         >;
                 };
                 // layer 1: NUM
@@ -392,21 +393,7 @@
                                   &trans    &trans    &trans      &trans    &mo MED   &trans
                         >;
                 };
-                // layer 2: CHA
-                char_layer {
-// ----------------------------------------------------------------------------------------------------------------------------
-// |  ESC    |         |         |         |         |         | |         |  ~      |  \      |  |      |         |          |
-// | CTRL    |         |         |         |         |         | |         |  -      |  _      |  [      |  ]      |          |
-// |         |         |         |         |         |         | |         |  +      |  =      |  {      |  }      |          |
-//                               |         | MED     |         | |         | ------- |         |
-                        bindings = <
-    &kp ESC   &trans    &trans    &trans    &trans    &trans      &trans    &kp TILDE &kp BSLH  &kp PIPE  &kp GRAVE &trans
-    &kp LCTRL &trans    &trans    &trans    &trans    &trans      &trans    &kp MINUS &kp UNDER &kp LBKT  &kp RBKT  &trans
-    &trans    &trans    &trans    &trans    &trans    &trans      &trans    &kp PLUS  &kp EQUAL &kp LBRC  &kp RBRC  &trans
-                                  &trans    &mo MED   &trans      &trans    &trans    &trans
-                        >;
-                };
-                // layer 3: FUN
+                // layer 2: FUN
                 func_layer {
 // ----------------------------------------------------------------------------------------------------------------------------
 // |         | F1      | F2      | F3      | F4      | F5      | | F6      | F7      | F8      | F9      | F10     |          |
@@ -420,7 +407,7 @@
                                   &trans    &trans    &trans      &trans    &trans    &trans
                         >;
                 };
-                // layer 4: MED
+                // layer 3: MED
                 media_layer {
 // ----------------------------------------------------------------------------------------------------------------------------
 // |         |         |         |         |         |         | |         |         |         |         | VOLDN   |         |
@@ -434,7 +421,7 @@
                                   &trans    &trans    &trans      &trans    &trans    &trans
                         >;
                 };
-                // layer 5: NAV
+                // layer 4: NAV
                 navigation_layer {
 // ----------------------------------------------------------------------------------------------------------------------------
 // |         |         | WORDLFT | UP      | WORDRGT |         | |         | INS     | HOME    | PAGEUP  |         | DELWORD  |
@@ -448,7 +435,7 @@
                                   &trans    &trans    &trans      &trans    &trans    &trans
                         >;
                 };
-                // layer 6: DNV
+                // layer 5: DNV
                 desknav_layer {
 // ----------------------------------------------------------------------------------------------------------------------------
 // |         |         |         | TASKVIEW|         |         | |         |         |         |         |         |          |
@@ -462,7 +449,7 @@
                                   &trans    &trans    &trans      &trans    &trans    &trans
                         >;
                 };
-                // layer 7: ZNV (ZVirtualDesktop navigation)
+                // layer 6: ZNV (ZVirtualDesktop navigation)
                 znav_layer {
 // ----------------------------------------------------------------------------------------------------------------------------
 // |         | Desk 1  | Desk 2  | Desk 3   | Desk 4  |         | |         |         | WinUp   |         |         |          |
