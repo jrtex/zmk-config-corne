@@ -309,6 +309,14 @@
                 };
         };
 
+        conditional_layers {
+                compatible = "zmk,conditional-layers";
+                media_layer {
+                        if-layers = <1 2>;
+                        then-layers = <3>;
+                };
+        };
+
 // Max 9 characters per key
 #define LTNAVA    &lt_rpi NAV A
 #define HMLGUIZ   &hm LGUI Z
