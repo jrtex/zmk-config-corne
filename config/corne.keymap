@@ -313,7 +313,7 @@
                 compatible = "zmk,conditional-layers";
                 media_layer {
                         if-layers = <1 2>;
-                        then-layers = <3>;
+                        then-layer = <3>;
                 };
         };
 
