@@ -6,15 +6,15 @@ draw_config:
   # separate_combo_diagrams: true
 layers:
   Base:
-    - ["Tab", Q, W, F, P, B, J, L, U, Y, ":", $$mdi:backspace-outline$$]
+    - [$$mdi:keyboard-tab$$, Q, W, F, P, B, J, L, U, Y, ":", $$mdi:backspace-outline$$]
     - ["NAV", A, R, S, T, G, M, N, E, I, O, "'"]
     - ["Shift", {h: Gui, t: Z}, {h: Alt, t: X}, {h: Ctrl, t: C}, {h: Shift, t: D}, V, K, {h: Shift, t: H}, {h: Ctrl, t: ","}, {h: Alt, t: . }, {h: Gui, t: /}, "Shift"]
-    - {h: (Sticky), t: Ctrl}
+    - {type: ghost}
     - {h: NUM,   t: $$mdi:keyboard-tab$$}
     - {h: DNAV,   t: $$mdi:keyboard-space$$}
     - $$mdi:keyboard-return$$
-    - CHAR
-    - FUNC
+    - {h: FUN, t: "Esc"}
+    - {type: ghost}
   Numbers (NUM):
     - ["Esc", "!", "@", "#", "$", "%", "^", "&", "*", "(", ")", ""]
     - ["", 1, 2, 3, 4, 5, 6, 7, 8, 9, 0, ""]
@@ -25,26 +25,16 @@ layers:
     - ""
     - "MED"
     - ""
-  Characters (CHAR):
-    - ["", "", "", "", "", "", "", "~", "\\", "|", "`", ""]
-    - ["", "", "", "", "", "", "", "-", "_", "[", "]", ""]
-    - ["", "", "", "", "", "", "", "+", "=", "{", "}", ""]
+  Functions (FUN):
+    - ["", "F1", "F2", "F3", "F4", "F5", "F6", "F7", "F8", "F9", "F10", ""]
+    - ["", "F11", "F12", "", "", "", "", "", "", "", "", ""]
+    - ["BT Clear", "BT 1", "BT 2", "BT 3", "BT 4", "BT 5", "", "", "", "", "", ""]
     - ""
     - "MED"
     - ""
     - ""
     - {type: "held"}
     - ""
-  Functions (FUN):
-    - ["", "F1", "F2", "F3", "F4", "F5", "F6", "F7", "F8", "F9", "F10", ""]
-    - ["", "F11", "F12", "", "", "", "", "", "", "", "", ""]
-    - ["BT Clear", "BT 1", "BT 2", "BT 3", "BT 4", "BT 5", "", "", "", "", "", ""]
-    - ""
-    - ""
-    - ""
-    - ""
-    - ""
-    - {type: "held"}
   Media (MED):
     - ["", "", "", "", "", "", "", "", "", "", "Vol Up", ""]
     - ["", "", "", "", "", "", "", "Prev", "Play", "Next", "Vol Down", ""]

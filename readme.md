@@ -32,7 +32,7 @@ This layout has evolved from a 60% keyboard, originally using QMK, to progressiv
 
 <img src="img/corne_keymap.png">
 
-> Drawn with [Keymap Drawer](/caksoylar/keymap-drawer)
+> Drawn with [Keymap Drawer](https://github.com/caksoylar/keymap-drawer)
 
 ## Combos
 
@@ -55,7 +55,7 @@ Combos have been very easy to implement and get used to. I quickly added many co
 
 <img src="img/corne_combos_map.png">
 
-> Drawn with [Keymap Drawer](/caksoylar/keymap-drawer)
+> Drawn with [Keymap Drawer](https://github.com/caksoylar/keymap-drawer)
 
 **A few thoughts**:
 
