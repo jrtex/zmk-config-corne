@@ -63,6 +63,9 @@ ZMK_COMBO(combo_rbkt,   &kp RBKT,  RM2 RB3, ALL, 20) // E >
 ZMK_COMBO(combo_autcrct, &autocrct, RB0 RB1, ALL, 20) // K H
 ZMK_COMBO(combo_dotdotsl, &dot_dot_slash, RB3 RB4, ALL, 20) // . / 
 
+// Condidional layers
+ZMK_CONDITIONAL_LAYER(NUM FUN, MED)
+
 &lt {
         tapping-term-ms = <250>;
 };
@@ -240,13 +243,6 @@ ZMK_COMBO(combo_dotdotsl, &dot_dot_slash, RB3 RB4, ALL, 20) // . /
                 };
         };
 
-        conditional_layers {
-                compatible = "zmk,conditional-layers";
-                media_layer {
-                        if-layers = <1 2>;
-                        then-layer = <3>;
-                };
-        };
 
 // Max 9 characters per key
 #define LTNAVA    &lt_rpi NAV A
