@@ -23,23 +23,23 @@
 ZMK_COMBO(combo_hrcaps, &caps_word, LB1 RB1, ALL)
 
 // Left-hand combos:
-ZMK_COMBO(combo_close,  &kp LC(W), LT4 LT3, 20)
-ZMK_COMBO(combo_esc,    &kp ESC,   LT3 LT2, 20)
-ZMK_COMBO(combo_tab,    &kp TAB,   LT2 LT1, 20)
+ZMK_COMBO(combo_close,  &kp LC(W), LT4 LT3, ALL, 20)
+ZMK_COMBO(combo_esc,    &kp ESC,   LT3 LT2, ALL, 20)
+ZMK_COMBO(combo_tab,    &kp TAB,   LT2 LT1, ALL, 20)
 
-ZMK_COMBO(combo_ctlaltdel, &kp LC(LA(DEL)), LT4 LT3 LT2 LT1, 20)
-ZMK_COMBO(combo_all,    &kp LC(A), LM4 LM3, 20) // A R
-ZMK_COMBO(combo_bspace, &kp BSPC,  LM3 LM2, 20) // R S
-ZMK_COMBO(combo_del,    &kp DEL,   LM2 LM1, 20) // S T
-ZMK_COMBO(combo_delw,   &kp LC(BSPC), LM3 LM2 LM1, 20) // R S T
-ZMK_COMBO(combo_delln,  &delete_line, LM4 LM3 LM2 LM1, 20) // A R S T
-ZMK_COMBO(combo_newln,  &mm_newline, LM1 LM0, 20) // T G
+ZMK_COMBO(combo_ctlaltdel, &kp LC(LA(DEL)), LT4 LT3 LT2 LT1, ALL, 20)
+ZMK_COMBO(combo_all,    &kp LC(A), LM4 LM3, ALL, 20) // A R
+ZMK_COMBO(combo_bspace, &kp BSPC,  LM3 LM2, ALL, 20) // R S
+ZMK_COMBO(combo_del,    &kp DEL,   LM2 LM1, ALL, 20) // S T
+ZMK_COMBO(combo_delw,   &kp LC(BSPC), LM3 LM2 LM1, ALL, 20) // R S T
+ZMK_COMBO(combo_delln,  &delete_line, LM4 LM3 LM2 LM1, ALL, 20) // A R S T
+ZMK_COMBO(combo_newln,  &mm_newline, LM1 LM0, ALL, 20) // T G
 
-ZMK_COMBO(combo_undo,   &kp LC(Z), LB4 LB3, 20) // Z X
-ZMK_COMBO(combo_copy,   &kp LC(C), LB3 LB2, 20) // X C
-ZMK_COMBO(combo_paste,  &kp LC(V), LB2 LB1, 20) // C D
-ZMK_COMBO(combo_cut,    &kp LC(X), LB3 LB2 LB1, 20) // X C D
-ZMK_COMBO(combo_selln,  &select_line, LB1 LB0, 20) // D V
+ZMK_COMBO(combo_undo,   &kp LC(Z), LB4 LB3, ALL, 20) // Z X
+ZMK_COMBO(combo_copy,   &kp LC(C), LB3 LB2, ALL, 20) // X C
+ZMK_COMBO(combo_paste,  &kp LC(V), LB2 LB1, ALL, 20) // C D
+ZMK_COMBO(combo_cut,    &kp LC(X), LB3 LB2 LB1, ALL, 20) // X C D
+ZMK_COMBO(combo_selln,  &select_line, LB1 LB0, ALL, 20) // D V
 
 
 &lt {
