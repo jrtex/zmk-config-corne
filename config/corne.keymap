@@ -63,6 +63,10 @@ ZMK_COMBO(combo_rbkt,   &kp RBKT,  RM2 RB3, ALL, 20) // E >
 ZMK_COMBO(combo_autcrct, &autocrct, RB0 RB1, ALL, 20) // K H
 ZMK_COMBO(combo_dotdotsl, &dot_dot_slash, RB3 RB4, ALL, 20) // . / 
 
+// Thumbs:
+ZMK_COMBO(combo_space,  &kp SPACE, LH0 LH1, ALL, 20) // Two thumb keys: repeatable space
+ZMK_COMBO(combo_ret,    &kp RET,   RH0 RH1, ALL, 20) // repeatable enter
+
 // Condidional layers
 ZMK_CONDITIONAL_LAYER(NUM FUN, MED)
 
