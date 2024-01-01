@@ -70,7 +70,7 @@ ZMK_COMBO(combo_ret,    &kp RET,   RH0 RH1, ALL, 20) // repeatable enter
 
 // Condidional layers
 ZMK_CONDITIONAL_LAYER(NUM FUN, MED)
-ZMK_CONDITIONAL_LAYRE(DNV KRB, KR2)
+ZMK_CONDITIONAL_LAYER(DNV KRB, KR2)
 
 &lt {
         tapping-term-ms = <250>;
