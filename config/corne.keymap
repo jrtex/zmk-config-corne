@@ -401,7 +401,7 @@ ZMK_CONDITIONAL_LAYER(DNV KRB, KR2)
                 };
                 // layer 7: Komorebi Shortcuts 2
                 // This layer is essentially a Shift-Alt shortcut layer, all configs are found in whkd
-                krb1_layer {
+                krb2_layer {
                         bindings = <
     &none  &kp LS(LA(Q)) &kp LS(LA(W)) &kp LS(LA(F)) &kp LS(LA(P)) &kp LS(LA(B))   &kp LS(LA(J)) &kp LS(LA(L)) &kp LS(LA(U))     &kp LS(LA(Y))   &kp LS(LA(SEMI))  &none
     &none  &kp LS(LA(A)) &kp LS(LA(R)) &kp LS(LA(S)) &kp LS(LA(T)) &kp LS(LA(G))   &kp LS(LA(M)) &kp LS(LA(N)) &kp LS(LA(E))     &kp LS(LA(I))   &kp LS(LA(O))     &none
