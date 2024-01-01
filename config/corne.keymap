@@ -395,7 +395,7 @@ ZMK_CONDITIONAL_LAYER(DNV KRB, KR2)
                         bindings = <
     &none     &kp LA(Q) &kp LA(W) &kp LA(F) &kp LA(P) &kp LA(B)   &kp LA(J) &kp LA(L) &kp LA(U)     &kp LA(Y)   &kp LA(SEMI)  &none
     &none     &kp LA(A) &kp LA(R) &kp LA(S) &kp LA(T) &kp LA(G)   &kp LA(M) &kp LA(N) &kp LA(E)     &kp LA(I)   &kp LA(O)     &none
-    &none     &kp LA(Z) &kp LA(X) &kp LA(C) &kp LA(D) &kp LA(V)   &kp LA(K) &kp LA(H) &kp LA(COMMA) &kp LA(DOT) &kp LA(FLSH)  &none
+    &none     &kp LA(Z) &kp LA(X) &kp LA(C) &kp LA(D) &kp LA(V)   &kp LA(K) &kp LA(H) &kp LA(COMMA) &kp LA(DOT) &kp LA(FSLH)  &none
                                   &none     &none     &none       &none     &none     &none
                         >;
                 };
@@ -405,7 +405,7 @@ ZMK_CONDITIONAL_LAYER(DNV KRB, KR2)
                         bindings = <
     &none  &kp LS(LA(Q)) &kp LS(LA(W)) &kp LS(LA(F)) &kp LS(LA(P)) &kp LS(LA(B))   &kp LS(LA(J)) &kp LS(LA(L)) &kp LS(LA(U))     &kp LS(LA(Y))   &kp LS(LA(SEMI))  &none
     &none  &kp LS(LA(A)) &kp LS(LA(R)) &kp LS(LA(S)) &kp LS(LA(T)) &kp LS(LA(G))   &kp LS(LA(M)) &kp LS(LA(N)) &kp LS(LA(E))     &kp LS(LA(I))   &kp LS(LA(O))     &none
-    &none  &kp LS(LA(Z)) &kp LS(LA(X)) &kp LS(LA(C)) &kp LS(LA(D)) &kp LS(LA(V))   &kp LS(LA(K)) &kp LS(LA(H)) &kp LS(LA(COMMA)) &kp LS(LA(DOT)) &kp LS(LA(FLSH))  &none
+    &none  &kp LS(LA(Z)) &kp LS(LA(X)) &kp LS(LA(C)) &kp LS(LA(D)) &kp LS(LA(V))   &kp LS(LA(K)) &kp LS(LA(H)) &kp LS(LA(COMMA)) &kp LS(LA(DOT)) &kp LS(LA(FSLH))  &none
                                        &none         &none         &none           &none         &none         &none
                         >;
                 };
