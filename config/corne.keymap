@@ -16,7 +16,8 @@
 #define MED 3
 #define NAV 4
 #define DNV 5
-#define ZNV 6
+#define KRB 6
+#define KR2 7
 
 
 // Two-hand combos:
@@ -69,6 +70,7 @@ ZMK_COMBO(combo_ret,    &kp RET,   RH0 RH1, ALL, 20) // repeatable enter
 
 // Condidional layers
 ZMK_CONDITIONAL_LAYER(NUM FUN, MED)
+ZMK_CONDITIONAL_LAYRE(DNV KRB, KR2)
 
 &lt {
         tapping-term-ms = <250>;
@@ -259,7 +261,7 @@ ZMK_CONDITIONAL_LAYER(NUM FUN, MED)
 #define HMRGUISLH &hm RGUI FSLH
 #define LTDNVSPAC &lt_rpi DNV SPACE
 #define LTNUMTAB  &lt_hp NUM TAB
-#define LTZNVRET  &lt_rpi ZNV RETURN
+#define LTKRBRET  &lt_rpi KRB RETURN
 #define LTFUNESC  &lt_hp FUN ESC
 #define STARSBL   &kp KP_MULTIPLY
 #define BTCLR     &bt BT_CLR
@@ -314,7 +316,7 @@ ZMK_CONDITIONAL_LAYER(NUM FUN, MED)
     &kp TAB   &kp Q     &kp W     &kp F     &kp P     &kp B       &kp J     &kp L     &kp U     &kp Y     &kp SEMI  &kp BSPC
     &mo NAV   &kp A     &kp R     &kp S     &kp T     &kp G       &kp M     &kp N     &kp E     &kp I     &kp O     &kp SQT
     &kp LSHFT HMLGUIZ   HMLALTX   HMLCTLC   HMLSFTD   &kp V       &kp K     HMRSFTH   HMRCTLCOM HMRALTDOT HMRGUISLH &kp RSHFT
-                                  &none     LTNUMTAB  LTDNVSPAC   LTZNVRET  LTFUNESC  &none
+                                  &none     LTNUMTAB  LTDNVSPAC   LTKRBRET  LTFUNESC  &none
                         >;
                 };
                 // layer 1: NUM
@@ -387,18 +389,24 @@ ZMK_CONDITIONAL_LAYER(NUM FUN, MED)
                                   &trans    &trans    &trans      &trans    &trans    &trans
                         >;
                 };
-                // layer 6: ZNV (ZVirtualDesktop navigation)
-                znav_layer {
-// ----------------------------------------------------------------------------------------------------------------------------
-// |         | Desk 1  | Desk 2  | Desk 3   | Desk 4  |         | |         |         | WinUp   |         |         |          |
-// |         |         | MoveWinL|          | MoveWinR|         | |         | WinLeft | WinDown | WinRight|         |          |
-// |         |         |         |          |         |         | |         |         |         |         |         |          |
-//                               |          |         | ------- | |         |         |         |
+                // layer 6: Komorebi Shortcuts 1
+                // This layer is essentially a Alt shortcut layer, all configs are found in whkd
+                krb1_layer {
                         bindings = <
-    &trans    ZNAV1     ZNAV2     ZNAV3     ZNAV4     &trans      &trans    &trans    WUP       &trans    &trans    &trans
-    &trans    &trans    ZMOVELEFT &trans    ZMOVERGHT &trans      &trans    WLEFT     WDOWN     WRIGHT    &trans    &trans
-    &trans    &trans    &trans    &trans    &trans    &trans      &trans    &trans    &trans    &trans    &trans    &trans
-                                  &trans    &trans    &trans      &trans    &trans    &trans
+    &none     &kp LA(Q) &kp LA(W) &kp LA(F) &kp LA(P) &kp LA(B)   &kp LA(J) &kp LA(L) &kp LA(U)     &kp LA(Y)   &kp LA(SEMI)  &none
+    &none     &kp LA(A) &kp LA(R) &kp LA(S) &kp LA(T) &kp LA(G)   &kp LA(M) &kp LA(N) &kp LA(E)     &kp LA(I)   &kp LA(O)     &none
+    &none     &kp LA(Z) &kp LA(X) &kp LA(C) &kp LA(D) &kp LA(V)   &kp LA(K) &kp LA(H) &kp LA(COMMA) &kp LA(DOT) &kp LA(FLSH)  &none
+                                  &none     &none     &none       &none     &none     &none
+                        >;
+                };
+                // layer 7: Komorebi Shortcuts 2
+                // This layer is essentially a Shift-Alt shortcut layer, all configs are found in whkd
+                krb1_layer {
+                        bindings = <
+    &none  &kp LS(LA(Q)) &kp LS(LA(W)) &kp LS(LA(F)) &kp LS(LA(P)) &kp LS(LA(B))   &kp LS(LA(J)) &kp LS(LA(L)) &kp LS(LA(U))     &kp LS(LA(Y))   &kp LS(LA(SEMI))  &none
+    &none  &kp LS(LA(A)) &kp LS(LA(R)) &kp LS(LA(S)) &kp LS(LA(T)) &kp LS(LA(G))   &kp LS(LA(M)) &kp LS(LA(N)) &kp LS(LA(E))     &kp LS(LA(I))   &kp LS(LA(O))     &none
+    &none  &kp LS(LA(Z)) &kp LS(LA(X)) &kp LS(LA(C)) &kp LS(LA(D)) &kp LS(LA(V))   &kp LS(LA(K)) &kp LS(LA(H)) &kp LS(LA(COMMA)) &kp LS(LA(DOT)) &kp LS(LA(FLSH))  &none
+                                       &none         &none         &none           &none         &none         &none
                         >;
                 };
         };
