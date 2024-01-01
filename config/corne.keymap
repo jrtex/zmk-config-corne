@@ -249,7 +249,6 @@ ZMK_CONDITIONAL_LAYER(NUM FUN, MED)
 
 
 // Max 9 characters per key
-#define LTNAVA    &lt_rpi NAV A
 #define HMLGUIZ   &hm LGUI Z
 #define HMLALTX   &hm LALT X
 #define HMLCTLC   &hm LCTRL C
@@ -313,7 +312,7 @@ ZMK_CONDITIONAL_LAYER(NUM FUN, MED)
 //                               | ------- | NUM     | SPACE   | | ENTER   | FUN     | ------- |
                         bindings = <
     &kp TAB   &kp Q     &kp W     &kp F     &kp P     &kp B       &kp J     &kp L     &kp U     &kp Y     &kp SEMI  &kp BSPC
-    &mo NAV   LTNAVA    &kp R     &kp S     &kp T     &kp G       &kp M     &kp N     &kp E     &kp I     &kp O     &kp SQT
+    &mo NAV   &kp A     &kp R     &kp S     &kp T     &kp G       &kp M     &kp N     &kp E     &kp I     &kp O     &kp SQT
     &kp LSHFT HMLGUIZ   HMLALTX   HMLCTLC   HMLSFTD   &kp V       &kp K     HMRSFTH   HMRCTLCOM HMRALTDOT HMRGUISLH &kp RSHFT
                                   &none     LTNUMTAB  LTDNVSPAC   LTZNVRET  LTFUNESC  &none
                         >;
