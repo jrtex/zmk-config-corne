@@ -69,7 +69,7 @@ ZMK_COMBO(combo_space,  &kp SPACE, LH0 LH1, ALL, 20) // Two thumb keys: repeatab
 ZMK_COMBO(combo_ret,    &kp RET,   RH0 RH1, ALL, 20) // repeatable enter
 
 // Condidional layers
-ZMK_CONDITIONAL_LAYER(NUM FUN, MED)
+// ZMK_CONDITIONAL_LAYER(NUM FUN, MED) -- Only last Conditional layer seems to work
 ZMK_CONDITIONAL_LAYER(DNV KRB, KR2)
 
 &lt {
@@ -344,7 +344,7 @@ ZMK_CONDITIONAL_LAYER(DNV KRB, KR2)
     &trans    &kp F1    &kp F2    &kp F3    &kp F4    &kp F5      &kp F6    &kp F7    &kp F8    &kp F9    &kp F10   &trans
     &kp LCTRL &kp F11   &kp F12   &trans    &trans    &trans      &trans    &trans    &trans    &trans    &trans    &trans
     BTCLR     BTSEL0    BTSEL1    BTSEL2    BTSEL3    BTSEL4      &trans    &trans    &trans    &trans    &trans    &trans
-                                  &trans    &trans    &trans      &trans    &trans    &trans
+                                  &trans    &mo MED   &trans      &trans    &trans    &trans
                         >;
                 };
                 // layer 3: MED
