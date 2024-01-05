@@ -18,6 +18,7 @@ This layout has evolved from a 60% keyboard, originally using QMK, to progressiv
   - Copy/paste, delete, backspace combos
   - Desktop navigation layer
   - Arrow cluster layer
+- Two layers dedicated to [Komorebi](https://github.com/LGUG2Z/komorebi) Window management
 - Desktop navigation layer for management of Windows virtual desktops
 - Reduce reliance on outer rows and outer thumb keys for eventual move to 34-key layout
 
@@ -61,3 +62,11 @@ Combos have been very easy to implement and get used to. I quickly added many co
 
 * As of the current ZMK version, combos may conflict with tap/hold modifiers when activating several modifiers simultaneously. This keymap mostly avoids this issue with bottom-row-mods, so home-row combos are not affected. A few combos are present on the left-hand, so left-hand mods must be pressed sequentially to avoid triggering the combos.
 * I found that combos that use only pinky/ring-finger are harder to activate. They require getting used-to, so I'm using only for less commonly used functions.
+
+## Komorebi
+
+[Komorebi](https://github.com/LGUG2Z/komorebi) is a tiling window manager for Windows, and relies on keyboard shortcuts to move windows around. The definition of the shortcuts are defined in the ```whkdrc``` file
+
+<img src="img/corne_komorebi_map.png">
+
+> Drawn with [Keymap Drawer](https://github.com/caksoylar/keymap-drawer)
