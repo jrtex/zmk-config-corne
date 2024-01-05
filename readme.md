@@ -67,6 +67,6 @@ Combos have been very easy to implement and get used to. I quickly added many co
 
 [Komorebi](https://github.com/LGUG2Z/komorebi) is a tiling window manager for Windows, and relies on keyboard shortcuts to move windows around. The definition of the shortcuts are defined in the ```whkdrc``` file
 
-<img src="img/corne_komorebi_map.png">
+<img src="img/corne_komorebi_keymap.png">
 
 > Drawn with [Keymap Drawer](https://github.com/caksoylar/keymap-drawer)
