@@ -1,0 +1,26 @@
+layout:
+  qmk_keyboard: corne_rotated
+  qmk_layout: LAYOUT_split_3x6_3
+draw_config:
+  arc_radius: 12
+layers:
+  Komorebi 1:
+    - ["", "", "", "Toggle Monocle", "Toggle Float", "", "", "Focus Workspace 1", "Focus Workspace 2", "Focus Workspace 3", "Focus Workspace 4", ""]
+    - ["", "Focus Left", "Focus Down", "Focus Up", "Focus Right", "", "", "Move Left", "Move Down", "Move Up", "Move Right", ""]
+    - ["", "", "", "Next Layout", "Prev Layout", "", "", "BSP", "UWide", "VStack", "HStack", ""]
+    - ""
+    - ""
+    - ""
+    - {type: "held"}
+    - ""
+    - ""
+  Komorebi 2:
+    - ["", "Close", "Retile", "Minimize", "Promote", "", "", "Send to 1", "Send to 2", "Send to 3", "Send to 4", ""]
+    - ["", "", "", "", "", "Y-Axis Right", "X-Axis Up", "Stack Left", "Stack Down", "Stack Up", "Stack Right", ""]
+    - ["", "Reset Whkd", "Komorebi Reset", "Flip X-axis", "Flip Y-Axis", "Y-Axis Left", "X-Axis Down", "Next Stack", "Prev Stack", "Unstack", "", ""]
+    - ""
+    - ""
+    - {type: "held"}
+    - {type: "held"}
+    - ""
+    - ""
