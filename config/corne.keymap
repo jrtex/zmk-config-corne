@@ -48,7 +48,7 @@ ZMK_COMBO(combo_excl,   &kp EXCL,  RT1 RT2, ALL, 20) // L U
 ZMK_COMBO(combo_qmrk,   &kp QMARK, RT2 RT3, ALL, 20) // U Y
 ZMK_COMBO(combo_smcln,  &kp SEMI,  RT1 RT3, ALL, 20) // L Y
 ZMK_COMBO(combo_plus,   &kp PLUS,  RT1 RT2 RT3, ALL, 20) // L U Y
-ZMK_COMBO(combo_bqt,    &kp GRAVE, RT1 RT4, ALL, 20) // Y ;
+ZMK_COMBO(combo_bqt,    &kp GRAVE, RT3 RT4, ALL, 20) // Y ;
 
 ZMK_COMBO(combo_undscr, &kp UNDER, RM0 RM1, ALL, 20) // M N
 ZMK_COMBO(combo_dash,   &kp MINUS, RM1 RM2, ALL, 20) // N E
