@@ -43,12 +43,12 @@ ZMK_COMBO(combo_cut,    &kp LC(X), LB3 LB2 LB1, ALL, 20) // X C D
 ZMK_COMBO(combo_selln,  &select_line, LB1 LB0, ALL, 20) // D V
 
 // Right-hand combos:
-ZMK_COMBO(combo_bqt,    &kp GRAVE, RT0 RT1, ALL, 20) // J L
-ZMK_COMBO(combo_tildgr, &tildegr,  RT1 RT2, ALL, 20) // L U
-ZMK_COMBO(combo_smcln,  &kp SEMI,  RT2 RT3, ALL, 20) // U Y
-ZMK_COMBO(combo_qst,    &kp QMARK, RT1 RT3, ALL, 20) // L Y 
-ZMK_COMBO(combo_excl,   &kp EXCL,  RT1 RT4, ALL, 20) // L ;
+ZMK_COMBO(combo_tilde,  &tildegr,  RT0 RT1, ALL, 20) // J L
+ZMK_COMBO(combo_excl,   &kp EXCL,  RT1 RT2, ALL, 20) // L U
+ZMK_COMBO(combo_qmrk,   &kp QMARK, RT2 RT3, ALL, 20) // U Y
+ZMK_COMBO(combo_smcln,  &kp SEMI,  RT1 RT3, ALL, 20) // L Y
 ZMK_COMBO(combo_plus,   &kp PLUS,  RT1 RT2 RT3, ALL, 20) // L U Y
+ZMK_COMBO(combo_bqt,    &kp GRAVE, RT1 RT4, ALL, 20) // Y ;
 
 ZMK_COMBO(combo_undscr, &kp UNDER, RM0 RM1, ALL, 20) // M N
 ZMK_COMBO(combo_dash,   &kp MINUS, RM1 RM2, ALL, 20) // N E
