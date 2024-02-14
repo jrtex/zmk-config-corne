@@ -263,7 +263,8 @@ ZMK_CONDITIONAL_LAYER(DNV KRB, KR2)
 #define LTDNVSPAC &lt_rpi DNV SPACE
 #define LTNUMTAB  &lt_hp NUM TAB
 #define LTKRBRET  &lt_rpi KRB RETURN
-#define LTFUNESC  &lt_hp FUN ESC
+#define STS       &sk LSHIFT
+#define LTFUNSTS  &lt_hp FUN STS
 #define STARSBL   &kp KP_MULTIPLY
 #define BTCLR     &bt BT_CLR
 #define BTSEL0    &bt BT_SEL 0
@@ -317,7 +318,7 @@ ZMK_CONDITIONAL_LAYER(DNV KRB, KR2)
     &kp TAB   &kp Q     &kp W     &kp F     &kp P     &kp B       &kp J     &kp L     &kp U     &kp Y     &kp SEMI  &kp BSPC
     &mo NAV   &kp A     &kp R     &kp S     &kp T     &kp G       &kp M     &kp N     &kp E     &kp I     &kp O     &kp SQT
     &kp LSHFT HMLGUIZ   HMLALTX   HMLCTLC   HMLSFTD   &kp V       &kp K     HMRSFTH   HMRCTLCOM HMRALTDOT HMRGUISLH &kp RSHFT
-                                  &none     LTNUMTAB  LTDNVSPAC   LTKRBRET  LTFUNESC  &none
+                                  &none     LTNUMTAB  LTDNVSPAC   LTKRBRET  LTFUNSTS  &none
                         >;
                 };
                 // layer 1: NUM
