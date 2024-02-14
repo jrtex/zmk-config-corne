@@ -204,6 +204,16 @@ ZMK_CONDITIONAL_LAYER(DNV KRB, KR2)
                         bindings = <&mo>, <&kp>;
                 };
 
+                ltst_hp: layertapstick_holdpreferred {
+                        compatible = "zmk,behavior-hold-tap";
+                        label = "HP LAYER TAP";
+                        #binding-cells = <2>;
+                        tapping-term-ms = <200>;
+                        quick-tap-ms = <0>;
+                        flavor = "hold-preferred";
+                        bindings = <&mo>, <&sk>;
+                };
+
                 tildegr: tilde_grave {
                         compatible = "zmk,behavior-mod-morph";
                         label = "TILDE_GRAVE";
@@ -263,8 +273,7 @@ ZMK_CONDITIONAL_LAYER(DNV KRB, KR2)
 #define LTDNVSPAC &lt_rpi DNV SPACE
 #define LTNUMTAB  &lt_hp NUM TAB
 #define LTKRBRET  &lt_rpi KRB RETURN
-#define STS       &sk LSHIFT
-#define LTFUNSTS  &lt_hp FUN STS
+#define LTFUNSTS  &ltst_hp FUN LSHIFT
 #define STARSBL   &kp KP_MULTIPLY
 #define BTCLR     &bt BT_CLR
 #define BTSEL0    &bt BT_SEL 0
